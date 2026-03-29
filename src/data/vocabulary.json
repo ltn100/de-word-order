@@ -1,0 +1,1181 @@
+{
+  "verbs": {
+    "sein": {
+      "type": "verb",
+      "conjugations": { "ich": "bin", "du": "bist", "er": "ist", "wir": "sind", "ihr": "seid", "sie": "sind" }
+    },
+    "haben": {
+      "type": "verb",
+      "conjugations": { "ich": "habe", "du": "hast", "er": "hat", "wir": "haben", "ihr": "habt", "sie": "haben" }
+    },
+    "gehen": {
+      "type": "verb",
+      "conjugations": { "ich": "gehe", "du": "gehst", "er": "geht", "wir": "gehen", "ihr": "geht", "sie": "gehen" }
+    },
+    "kommen": {
+      "type": "verb",
+      "conjugations": { "ich": "komme", "du": "kommst", "er": "kommt", "wir": "kommen", "ihr": "kommt", "sie": "kommen" }
+    },
+    "machen": {
+      "type": "verb",
+      "conjugations": { "ich": "mache", "du": "machst", "er": "macht", "wir": "machen", "ihr": "macht", "sie": "machen" }
+    },
+    "wohnen": {
+      "type": "verb",
+      "conjugations": { "ich": "wohne", "du": "wohnst", "er": "wohnt", "wir": "wohnen", "ihr": "wohnt", "sie": "wohnen" }
+    },
+    "arbeiten": {
+      "type": "verb",
+      "conjugations": { "ich": "arbeite", "du": "arbeitest", "er": "arbeitet", "wir": "arbeiten", "ihr": "arbeitet", "sie": "arbeiten" }
+    },
+    "spielen": {
+      "type": "verb",
+      "conjugations": { "ich": "spiele", "du": "spielst", "er": "spielt", "wir": "spielen", "ihr": "spielt", "sie": "spielen" }
+    },
+    "lernen": {
+      "type": "verb",
+      "conjugations": { "ich": "lerne", "du": "lernst", "er": "lernt", "wir": "lernen", "ihr": "lernt", "sie": "lernen" }
+    },
+    "trinken": {
+      "type": "verb",
+      "conjugations": { "ich": "trinke", "du": "trinkst", "er": "trinkt", "wir": "trinken", "ihr": "trinkt", "sie": "trinken" }
+    },
+    "essen": {
+      "type": "verb",
+      "conjugations": { "ich": "esse", "du": "isst", "er": "isst", "wir": "essen", "ihr": "esst", "sie": "essen" }
+    },
+    "lesen": {
+      "type": "verb",
+      "conjugations": { "ich": "lese", "du": "liest", "er": "liest", "wir": "lesen", "ihr": "lest", "sie": "lesen" }
+    },
+    "schreiben": {
+      "type": "verb",
+      "conjugations": { "ich": "schreibe", "du": "schreibst", "er": "schreibt", "wir": "schreiben", "ihr": "schreibt", "sie": "schreiben" }
+    },
+    "hören": {
+      "type": "verb",
+      "conjugations": { "ich": "höre", "du": "hörst", "er": "hört", "wir": "hören", "ihr": "hört", "sie": "hören" }
+    },
+    "sehen": {
+      "type": "verb",
+      "conjugations": { "ich": "sehe", "du": "siehst", "er": "sieht", "wir": "sehen", "ihr": "seht", "sie": "sehen" }
+    },
+    "sprechen": {
+      "type": "verb",
+      "conjugations": { "ich": "spreche", "du": "sprichst", "er": "spricht", "wir": "sprechen", "ihr": "sprecht", "sie": "sprechen" }
+    },
+    "finden": {
+      "type": "verb",
+      "conjugations": { "ich": "finde", "du": "findest", "er": "findet", "wir": "finden", "ihr": "findet", "sie": "finden" }
+    },
+    "warten": {
+      "type": "verb",
+      "conjugations": { "ich": "warte", "du": "wartest", "er": "wartet", "wir": "warten", "ihr": "wartet", "sie": "warten" }
+    },
+    "kaufen": {
+      "type": "verb",
+      "conjugations": { "ich": "kaufe", "du": "kaufst", "er": "kauft", "wir": "kaufen", "ihr": "kauft", "sie": "kaufen" }
+    },
+    "kochen": {
+      "type": "verb",
+      "conjugations": { "ich": "koche", "du": "kochst", "er": "kocht", "wir": "kochen", "ihr": "kocht", "sie": "kochen" }
+    },
+    "tanzen": {
+      "type": "verb",
+      "conjugations": { "ich": "tanze", "du": "tanzt", "er": "tanzt", "wir": "tanzen", "ihr": "tanzt", "sie": "tanzen" }
+    },
+    "singen": {
+      "type": "verb",
+      "conjugations": { "ich": "singe", "du": "singst", "er": "singt", "wir": "singen", "ihr": "singt", "sie": "singen" }
+    },
+    "schwimmen": {
+      "type": "verb",
+      "conjugations": { "ich": "schwimme", "du": "schwimmst", "er": "schwimmt", "wir": "schwimmen", "ihr": "schwimmt", "sie": "schwimmen" }
+    },
+    "laufen": {
+      "type": "verb",
+      "conjugations": { "ich": "laufe", "du": "läufst", "er": "läuft", "wir": "laufen", "ihr": "lauft", "sie": "laufen" }
+    },
+    "fahren": {
+      "type": "verb",
+      "conjugations": { "ich": "fahre", "du": "fährst", "er": "fährt", "wir": "fahren", "ihr": "fahrt", "sie": "fahren" }
+    },
+    "fliegen": {
+      "type": "verb",
+      "conjugations": { "ich": "fliege", "du": "fliegst", "er": "fliegt", "wir": "fliegen", "ihr": "fliegt", "sie": "fliegen" }
+    },
+    "schlafen": {
+      "type": "verb",
+      "conjugations": { "ich": "schlafe", "du": "schläfst", "er": "schläft", "wir": "schlafen", "ihr": "schlaft", "sie": "schlafen" }
+    },
+    "stehen": {
+      "type": "verb",
+      "conjugations": { "ich": "stehe", "du": "stehst", "er": "steht", "wir": "stehen", "ihr": "steht", "sie": "stehen" }
+    },
+    "sitzen": {
+      "type": "verb",
+      "conjugations": { "ich": "sitze", "du": "sitzt", "er": "sitzt", "wir": "sitzen", "ihr": "sitzt", "sie": "sitzen" }
+    },
+    "liegen": {
+      "type": "verb",
+      "conjugations": { "ich": "liege", "du": "liegst", "er": "liegt", "wir": "liegen", "ihr": "liegt", "sie": "liegen" }
+    },
+    "geben": {
+      "type": "verb",
+      "conjugations": { "ich": "gebe", "du": "gibst", "er": "gibt", "wir": "geben", "ihr": "gebt", "sie": "geben" }
+    },
+    "nehmen": {
+      "type": "verb",
+      "conjugations": { "ich": "nehme", "du": "nimmst", "er": "nimmt", "wir": "nehmen", "ihr": "nehmt", "sie": "nehmen" }
+    },
+    "bringen": {
+      "type": "verb",
+      "conjugations": { "ich": "bringe", "du": "bringst", "er": "bringt", "wir": "bringen", "ihr": "bringt", "sie": "bringen" }
+    },
+    "helfen": {
+      "type": "verb",
+      "conjugations": { "ich": "helfe", "du": "hilfst", "er": "hilft", "wir": "helfen", "ihr": "helft", "sie": "helfen" }
+    },
+    "suchen": {
+      "type": "verb",
+      "conjugations": { "ich": "suche", "du": "suchst", "er": "sucht", "wir": "suchen", "ihr": "sucht", "sie": "suchen" }
+    },
+    "brauchen": {
+      "type": "verb",
+      "conjugations": { "ich": "brauche", "du": "brauchst", "er": "braucht", "wir": "brauchen", "ihr": "braucht", "sie": "brauchen" }
+    },
+    "bleiben": {
+      "type": "verb",
+      "conjugations": { "ich": "bleibe", "du": "bleibst", "er": "bleibt", "wir": "bleiben", "ihr": "bleibt", "sie": "bleiben" }
+    },
+    "verstehen": {
+      "type": "verb",
+      "conjugations": { "ich": "verstehe", "du": "verstehst", "er": "versteht", "wir": "verstehen", "ihr": "versteht", "sie": "verstehen" }
+    },
+    "kennen": {
+      "type": "verb",
+      "conjugations": { "ich": "kenne", "du": "kennst", "er": "kennt", "wir": "kennen", "ihr": "kennt", "sie": "kennen" }
+    },
+    "wissen": {
+      "type": "verb",
+      "conjugations": { "ich": "weiß", "du": "weißt", "er": "weiß", "wir": "wissen", "ihr": "wisst", "sie": "wissen" }
+    },
+    "glauben": {
+      "type": "verb",
+      "conjugations": { "ich": "glaube", "du": "glaubst", "er": "glaubt", "wir": "glauben", "ihr": "glaubt", "sie": "glauben" }
+    },
+    "denken": {
+      "type": "verb",
+      "conjugations": { "ich": "denke", "du": "denkst", "er": "denkt", "wir": "denken", "ihr": "denkt", "sie": "denken" }
+    },
+    "lieben": {
+      "type": "verb",
+      "conjugations": { "ich": "liebe", "du": "liebst", "er": "liebt", "wir": "lieben", "ihr": "liebt", "sie": "lieben" }
+    },
+    "leben": {
+      "type": "verb",
+      "conjugations": { "ich": "lebe", "du": "lebst", "er": "lebt", "wir": "leben", "ihr": "lebt", "sie": "leben" }
+    },
+    "öffnen": {
+      "type": "verb",
+      "conjugations": { "ich": "öffne", "du": "öffnest", "er": "öffnet", "wir": "öffnen", "ihr": "öffnet", "sie": "öffnen" }
+    },
+    "schließen": {
+      "type": "verb",
+      "conjugations": { "ich": "schließe", "du": "schließt", "er": "schließt", "wir": "schließen", "ihr": "schließt", "sie": "schließen" }
+    },
+    "besuchen": {
+      "type": "verb",
+      "conjugations": { "ich": "besuche", "du": "besuchst", "er": "besucht", "wir": "besuchen", "ihr": "besucht", "sie": "besuchen" }
+    },
+    "bezahlen": {
+      "type": "verb",
+      "conjugations": { "ich": "bezahle", "du": "bezahlst", "er": "bezahlt", "wir": "bezahlen", "ihr": "bezahlt", "sie": "bezahlen" }
+    },
+    "fragen": {
+      "type": "verb",
+      "conjugations": { "ich": "frage", "du": "fragst", "er": "fragt", "wir": "fragen", "ihr": "fragt", "sie": "fragen" }
+    },
+    "antworten": {
+      "type": "verb",
+      "conjugations": { "ich": "antworte", "du": "antwortest", "er": "antwortet", "wir": "antworten", "ihr": "antwortet", "sie": "antworten" }
+    },
+    "können": {
+      "type": "verb",
+      "conjugations": { "ich": "kann", "du": "kannst", "er": "kann", "wir": "können", "ihr": "könnt", "sie": "können" }
+    },
+    "müssen": {
+      "type": "verb",
+      "conjugations": { "ich": "muss", "du": "musst", "er": "muss", "wir": "müssen", "ihr": "müsst", "sie": "müssen" }
+    },
+    "wollen": {
+      "type": "verb",
+      "conjugations": { "ich": "will", "du": "willst", "er": "will", "wir": "wollen", "ihr": "wollt", "sie": "wollen" }
+    },
+    "sollen": {
+      "type": "verb",
+      "conjugations": { "ich": "soll", "du": "sollst", "er": "soll", "wir": "sollen", "ihr": "sollt", "sie": "sollen" }
+    },
+    "dürfen": {
+      "type": "verb",
+      "conjugations": { "ich": "darf", "du": "darfst", "er": "darf", "wir": "dürfen", "ihr": "dürft", "sie": "dürfen" }
+    },
+    "mögen": {
+      "type": "verb",
+      "conjugations": { "ich": "möchte", "du": "möchtest", "er": "möchte", "wir": "möchten", "ihr": "möchtet", "sie": "möchten" }
+    },
+    "sein-past": {
+      "type": "verb",
+      "conjugations": { "ich": "war", "du": "warst", "er": "war", "wir": "waren", "ihr": "wart", "sie": "waren" }
+    },
+    "aufstehen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "auf",
+      "stem": "stehen",
+      "conjugations": { "ich": "stehe", "du": "stehst", "er": "steht", "wir": "stehen", "ihr": "steht", "sie": "stehen" }
+    },
+    "anrufen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "an",
+      "stem": "rufen",
+      "conjugations": { "ich": "rufe", "du": "rufst", "er": "ruft", "wir": "rufen", "ihr": "ruft", "sie": "rufen" }
+    },
+    "abfahren": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "ab",
+      "stem": "fahren",
+      "conjugations": { "ich": "fahre", "du": "fährst", "er": "fährt", "wir": "fahren", "ihr": "fahrt", "sie": "fahren" }
+    },
+    "ankommen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "an",
+      "stem": "kommen",
+      "conjugations": { "ich": "komme", "du": "kommst", "er": "kommt", "wir": "kommen", "ihr": "kommt", "sie": "kommen" }
+    },
+    "einkaufen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "ein",
+      "stem": "kaufen",
+      "conjugations": { "ich": "kaufe", "du": "kaufst", "er": "kauft", "wir": "kaufen", "ihr": "kauft", "sie": "kaufen" }
+    },
+    "fernsehen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "fern",
+      "stem": "sehen",
+      "conjugations": { "ich": "sehe", "du": "siehst", "er": "sieht", "wir": "sehen", "ihr": "seht", "sie": "sehen" }
+    },
+    "aufräumen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "auf",
+      "stem": "räumen",
+      "conjugations": { "ich": "räume", "du": "räumst", "er": "räumt", "wir": "räumen", "ihr": "räumt", "sie": "räumen" }
+    },
+    "anfangen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "an",
+      "stem": "fangen",
+      "conjugations": { "ich": "fange", "du": "fängst", "er": "fängt", "wir": "fangen", "ihr": "fangt", "sie": "fangen" }
+    },
+    "aufhören": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "auf",
+      "stem": "hören",
+      "conjugations": { "ich": "höre", "du": "hörst", "er": "hört", "wir": "hören", "ihr": "hört", "sie": "hören" }
+    },
+    "anziehen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "an",
+      "stem": "ziehen",
+      "conjugations": { "ich": "ziehe", "du": "ziehst", "er": "zieht", "wir": "ziehen", "ihr": "zieht", "sie": "ziehen" }
+    },
+    "ausziehen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "aus",
+      "stem": "ziehen",
+      "conjugations": { "ich": "ziehe", "du": "ziehst", "er": "zieht", "wir": "ziehen", "ihr": "zieht", "sie": "ziehen" }
+    },
+    "mitkommen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "mit",
+      "stem": "kommen",
+      "conjugations": { "ich": "komme", "du": "kommst", "er": "kommt", "wir": "kommen", "ihr": "kommt", "sie": "kommen" }
+    },
+    "zurückkommen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "zurück",
+      "stem": "kommen",
+      "conjugations": { "ich": "komme", "du": "kommst", "er": "kommt", "wir": "kommen", "ihr": "kommt", "sie": "kommen" }
+    },
+    "einladen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "ein",
+      "stem": "laden",
+      "conjugations": { "ich": "lade", "du": "lädst", "er": "lädt", "wir": "laden", "ihr": "ladet", "sie": "laden" }
+    },
+    "zeigen": {
+      "type": "verb",
+      "conjugations": { "ich": "zeige", "du": "zeigst", "er": "zeigt", "wir": "zeigen", "ihr": "zeigt", "sie": "zeigen" }
+    },
+    "treffen": {
+      "type": "verb",
+      "conjugations": { "ich": "treffe", "du": "triffst", "er": "trifft", "wir": "treffen", "ihr": "trefft", "sie": "treffen" }
+    },
+    "beginnen": {
+      "type": "verb",
+      "conjugations": { "ich": "beginne", "du": "beginnst", "er": "beginnt", "wir": "beginnen", "ihr": "beginnt", "sie": "beginnen" }
+    },
+    "stellen": {
+      "type": "verb",
+      "conjugations": { "ich": "stelle", "du": "stellst", "er": "stellt", "wir": "stellen", "ihr": "stellt", "sie": "stellen" }
+    },
+    "führen": {
+      "type": "verb",
+      "conjugations": { "ich": "führe", "du": "führst", "er": "führt", "wir": "führen", "ihr": "führt", "sie": "führen" }
+    },
+    "schicken": {
+      "type": "verb",
+      "conjugations": { "ich": "schicke", "du": "schickst", "er": "schickt", "wir": "schicken", "ihr": "schickt", "sie": "schicken" }
+    },
+    "feiern": {
+      "type": "verb",
+      "conjugations": { "ich": "feiere", "du": "feierst", "er": "feiert", "wir": "feiern", "ihr": "feiert", "sie": "feiern" }
+    },
+    "lösen": {
+      "type": "verb",
+      "conjugations": { "ich": "löse", "du": "löst", "er": "löst", "wir": "lösen", "ihr": "löst", "sie": "lösen" }
+    },
+    "backen": {
+      "type": "verb",
+      "conjugations": { "ich": "backe", "du": "bäckst", "er": "bäckt", "wir": "backen", "ihr": "backt", "sie": "backen" }
+    },
+    "reparieren": {
+      "type": "verb",
+      "conjugations": { "ich": "repariere", "du": "reparierst", "er": "repariert", "wir": "reparieren", "ihr": "repariert", "sie": "reparieren" }
+    },
+    "stören": {
+      "type": "verb",
+      "conjugations": { "ich": "störe", "du": "störst", "er": "stört", "wir": "stören", "ihr": "stört", "sie": "stören" }
+    },
+    "überqueren": {
+      "type": "verb",
+      "conjugations": { "ich": "überquere", "du": "überquerst", "er": "überquert", "wir": "überqueren", "ihr": "überquert", "sie": "überqueren" }
+    },
+    "hoffen": {
+      "type": "verb",
+      "conjugations": { "ich": "hoffe", "du": "hoffst", "er": "hofft", "wir": "hoffen", "ihr": "hofft", "sie": "hoffen" }
+    },
+    "sagen": {
+      "type": "verb",
+      "conjugations": { "ich": "sage", "du": "sagst", "er": "sagt", "wir": "sagen", "ihr": "sagt", "sie": "sagen" }
+    },
+    "regnen": {
+      "type": "verb",
+      "conjugations": { "ich": "regne", "du": "regnest", "er": "regnet", "wir": "regnen", "ihr": "regnet", "sie": "regnen" }
+    },
+    "waschen": {
+      "type": "verb",
+      "conjugations": { "ich": "wasche", "du": "wäschst", "er": "wäscht", "wir": "waschen", "ihr": "wascht", "sie": "waschen" }
+    },
+    "sparen": {
+      "type": "verb",
+      "conjugations": { "ich": "spare", "du": "sparst", "er": "spart", "wir": "sparen", "ihr": "spart", "sie": "sparen" }
+    },
+    "frühstücken": {
+      "type": "verb",
+      "conjugations": { "ich": "frühstücke", "du": "frühstückst", "er": "frühstückt", "wir": "frühstücken", "ihr": "frühstückt", "sie": "frühstücken" }
+    },
+    "scheinen": {
+      "type": "verb",
+      "conjugations": { "ich": "scheine", "du": "scheinst", "er": "scheint", "wir": "scheinen", "ihr": "scheint", "sie": "scheinen" }
+    },
+    "tragen": {
+      "type": "verb",
+      "conjugations": { "ich": "trage", "du": "trägst", "er": "trägt", "wir": "tragen", "ihr": "tragt", "sie": "tragen" }
+    },
+    "einziehen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "ein",
+      "stem": "ziehen",
+      "conjugations": { "ich": "ziehe", "du": "ziehst", "er": "zieht", "wir": "ziehen", "ihr": "zieht", "sie": "ziehen" }
+    },
+    "wegziehen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "weg",
+      "stem": "ziehen",
+      "conjugations": { "ich": "ziehe", "du": "ziehst", "er": "zieht", "wir": "ziehen", "ihr": "zieht", "sie": "ziehen" }
+    },
+    "rausgehen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "raus",
+      "stem": "gehen",
+      "conjugations": { "ich": "gehe", "du": "gehst", "er": "geht", "wir": "gehen", "ihr": "geht", "sie": "gehen" }
+    },
+    "spazieren": {
+      "type": "verb",
+      "conjugations": { "ich": "spaziere", "du": "spazierst", "er": "spaziert", "wir": "spazieren", "ihr": "spaziert", "sie": "spazieren" }
+    },
+    "reisen": {
+      "type": "verb",
+      "conjugations": { "ich": "reise", "du": "reist", "er": "reist", "wir": "reisen", "ihr": "reist", "sie": "reisen" }
+    },
+    "mögen": {
+      "type": "verb",
+      "conjugations": { "ich": "mag", "du": "magst", "er": "mag", "wir": "mögen", "ihr": "mögt", "sie": "mögen" }
+    },
+    "haben-past": {
+      "type": "verb",
+      "conjugations": { "ich": "hatte", "du": "hattest", "er": "hatte", "wir": "hatten", "ihr": "hattet", "sie": "hatten" }
+    },
+    "spielen-past": {
+      "type": "verb",
+      "conjugations": { "ich": "spielte", "du": "spieltest", "er": "spielte", "wir": "spielten", "ihr": "spieltet", "sie": "spielten" }
+    },
+    "wohnen-past": {
+      "type": "verb",
+      "conjugations": { "ich": "wohnte", "du": "wohntest", "er": "wohnte", "wir": "wohnten", "ihr": "wohntet", "sie": "wohnten" }
+    },
+    "arbeiten-past": {
+      "type": "verb",
+      "conjugations": { "ich": "arbeitete", "du": "arbeitetest", "er": "arbeitete", "wir": "arbeiteten", "ihr": "arbeitetet", "sie": "arbeiteten" }
+    }
+  },
+  "nouns": {
+    "Mann": { "type": "noun", "gender": "m", "pluralForm": "Männer" },
+    "Frau": { "type": "noun", "gender": "f", "pluralForm": "Frauen" },
+    "Kind": { "type": "noun", "gender": "n", "pluralForm": "Kinder" },
+    "Junge": { "type": "noun", "gender": "m", "pluralForm": "Jungen" },
+    "Mädchen": { "type": "noun", "gender": "n", "pluralForm": "Mädchen" },
+    "Vater": { "type": "noun", "gender": "m", "pluralForm": "Väter" },
+    "Mutter": { "type": "noun", "gender": "f", "pluralForm": "Mütter" },
+    "Bruder": { "type": "noun", "gender": "m", "pluralForm": "Brüder" },
+    "Schwester": { "type": "noun", "gender": "f", "pluralForm": "Schwestern" },
+    "Sohn": { "type": "noun", "gender": "m", "pluralForm": "Söhne" },
+    "Tochter": { "type": "noun", "gender": "f", "pluralForm": "Töchter" },
+    "Großvater": { "type": "noun", "gender": "m", "pluralForm": "Großväter" },
+    "Großmutter": { "type": "noun", "gender": "f", "pluralForm": "Großmütter" },
+    "Freund": { "type": "noun", "gender": "m", "pluralForm": "Freunde" },
+    "Freundin": { "type": "noun", "gender": "f", "pluralForm": "Freundinnen" },
+    "Lehrer": { "type": "noun", "gender": "m", "pluralForm": "Lehrer" },
+    "Lehrerin": { "type": "noun", "gender": "f", "pluralForm": "Lehrerinnen" },
+    "Schüler": { "type": "noun", "gender": "m", "pluralForm": "Schüler" },
+    "Student": { "type": "noun", "gender": "m", "pluralForm": "Studenten" },
+    "Arzt": { "type": "noun", "gender": "m", "pluralForm": "Ärzte" },
+    "Ärztin": { "type": "noun", "gender": "f", "pluralForm": "Ärztinnen" },
+    "Hund": { "type": "noun", "gender": "m", "pluralForm": "Hunde" },
+    "Katze": { "type": "noun", "gender": "f", "pluralForm": "Katzen" },
+    "Haus": { "type": "noun", "gender": "n", "pluralForm": "Häuser" },
+    "Wohnung": { "type": "noun", "gender": "f", "pluralForm": "Wohnungen" },
+    "Zimmer": { "type": "noun", "gender": "n", "pluralForm": "Zimmer" },
+    "Küche": { "type": "noun", "gender": "f", "pluralForm": "Küchen" },
+    "Bad": { "type": "noun", "gender": "n", "pluralForm": "Bäder" },
+    "Garten": { "type": "noun", "gender": "m", "pluralForm": "Gärten" },
+    "Tür": { "type": "noun", "gender": "f", "pluralForm": "Türen" },
+    "Fenster": { "type": "noun", "gender": "n", "pluralForm": "Fenster" },
+    "Tisch": { "type": "noun", "gender": "m", "pluralForm": "Tische" },
+    "Stuhl": { "type": "noun", "gender": "m", "pluralForm": "Stühle" },
+    "Bett": { "type": "noun", "gender": "n", "pluralForm": "Betten" },
+    "Schule": { "type": "noun", "gender": "f", "pluralForm": "Schulen" },
+    "Universität": { "type": "noun", "gender": "f", "pluralForm": "Universitäten" },
+    "Büro": { "type": "noun", "gender": "n", "pluralForm": "Büros" },
+    "Arbeit": { "type": "noun", "gender": "f" },
+    "Stadt": { "type": "noun", "gender": "f", "pluralForm": "Städte" },
+    "Straße": { "type": "noun", "gender": "f", "pluralForm": "Straßen" },
+    "Park": { "type": "noun", "gender": "m", "pluralForm": "Parks" },
+    "Geschäft": { "type": "noun", "gender": "n", "pluralForm": "Geschäfte" },
+    "Supermarkt": { "type": "noun", "gender": "m", "pluralForm": "Supermärkte" },
+    "Restaurant": { "type": "noun", "gender": "n", "pluralForm": "Restaurants" },
+    "Café": { "type": "noun", "gender": "n", "pluralForm": "Cafés" },
+    "Kino": { "type": "noun", "gender": "n", "pluralForm": "Kinos" },
+    "Bahnhof": { "type": "noun", "gender": "m", "pluralForm": "Bahnhöfe" },
+    "Flughafen": { "type": "noun", "gender": "m", "pluralForm": "Flughäfen" },
+    "Hotel": { "type": "noun", "gender": "n", "pluralForm": "Hotels" },
+    "Krankenhaus": { "type": "noun", "gender": "n", "pluralForm": "Krankenhäuser" },
+    "Kirche": { "type": "noun", "gender": "f", "pluralForm": "Kirchen" },
+    "Museum": { "type": "noun", "gender": "n", "pluralForm": "Museen" },
+    "Buch": { "type": "noun", "gender": "n", "pluralForm": "Bücher" },
+    "Zeitung": { "type": "noun", "gender": "f", "pluralForm": "Zeitungen" },
+    "Brief": { "type": "noun", "gender": "m", "pluralForm": "Briefe" },
+    "Computer": { "type": "noun", "gender": "m", "pluralForm": "Computer" },
+    "Handy": { "type": "noun", "gender": "n", "pluralForm": "Handys" },
+    "Telefon": { "type": "noun", "gender": "n", "pluralForm": "Telefone" },
+    "Auto": { "type": "noun", "gender": "n", "pluralForm": "Autos" },
+    "Bus": { "type": "noun", "gender": "m", "pluralForm": "Busse" },
+    "Zug": { "type": "noun", "gender": "m", "pluralForm": "Züge" },
+    "Fahrrad": { "type": "noun", "gender": "n", "pluralForm": "Fahrräder" },
+    "Flugzeug": { "type": "noun", "gender": "n", "pluralForm": "Flugzeuge" },
+    "Wasser": { "type": "noun", "gender": "n" },
+    "Kaffee": { "type": "noun", "gender": "m" },
+    "Tee": { "type": "noun", "gender": "m" },
+    "Milch": { "type": "noun", "gender": "f" },
+    "Saft": { "type": "noun", "gender": "m", "pluralForm": "Säfte" },
+    "Bier": { "type": "noun", "gender": "n", "pluralForm": "Biere" },
+    "Wein": { "type": "noun", "gender": "m", "pluralForm": "Weine" },
+    "Brot": { "type": "noun", "gender": "n", "pluralForm": "Brote" },
+    "Käse": { "type": "noun", "gender": "m" },
+    "Fleisch": { "type": "noun", "gender": "n" },
+    "Fisch": { "type": "noun", "gender": "m", "pluralForm": "Fische" },
+    "Ei": { "type": "noun", "gender": "n", "pluralForm": "Eier" },
+    "Gemüse": { "type": "noun", "gender": "n" },
+    "Obst": { "type": "noun", "gender": "n" },
+    "Apfel": { "type": "noun", "gender": "m", "pluralForm": "Äpfel" },
+    "Kuchen": { "type": "noun", "gender": "m", "pluralForm": "Kuchen" },
+    "Pizza": { "type": "noun", "gender": "f", "pluralForm": "Pizzen" },
+    "Suppe": { "type": "noun", "gender": "f", "pluralForm": "Suppen" },
+    "Zeit": { "type": "noun", "gender": "f", "pluralForm": "Zeiten" },
+    "Tag": { "type": "noun", "gender": "m", "pluralForm": "Tage" },
+    "Woche": { "type": "noun", "gender": "f", "pluralForm": "Wochen" },
+    "Monat": { "type": "noun", "gender": "m", "pluralForm": "Monate" },
+    "Jahr": { "type": "noun", "gender": "n", "pluralForm": "Jahre" },
+    "Morgen": { "type": "noun", "gender": "m" },
+    "Abend": { "type": "noun", "gender": "m", "pluralForm": "Abende" },
+    "Nacht": { "type": "noun", "gender": "f", "pluralForm": "Nächte" },
+    "Stunde": { "type": "noun", "gender": "f", "pluralForm": "Stunden" },
+    "Minute": { "type": "noun", "gender": "f", "pluralForm": "Minuten" },
+    "Wochenende": { "type": "noun", "gender": "n", "pluralForm": "Wochenenden" },
+    "Urlaub": { "type": "noun", "gender": "m", "pluralForm": "Urlaube" },
+    "Geld": { "type": "noun", "gender": "n" },
+    "Preis": { "type": "noun", "gender": "m", "pluralForm": "Preise" },
+    "Problem": { "type": "noun", "gender": "n", "pluralForm": "Probleme" },
+    "Frage": { "type": "noun", "gender": "f", "pluralForm": "Fragen" },
+    "Antwort": { "type": "noun", "gender": "f", "pluralForm": "Antworten" },
+    "Name": { "type": "noun", "gender": "m", "pluralForm": "Namen" },
+    "Sprache": { "type": "noun", "gender": "f", "pluralForm": "Sprachen" },
+    "Deutsch": { "type": "noun", "gender": "n" },
+    "Englisch": { "type": "noun", "gender": "n" },
+    "Wetter": { "type": "noun", "gender": "n" },
+    "Sonne": { "type": "noun", "gender": "f" },
+    "Regen": { "type": "noun", "gender": "m" },
+    "Film": { "type": "noun", "gender": "m", "pluralForm": "Filme" },
+    "Musik": { "type": "noun", "gender": "f" },
+    "Sport": { "type": "noun", "gender": "m" },
+    "Fußball": { "type": "noun", "gender": "m" },
+    "Spiel": { "type": "noun", "gender": "n", "pluralForm": "Spiele" },
+    "Unterricht": { "type": "noun", "gender": "m" },
+    "Kurs": { "type": "noun", "gender": "m", "pluralForm": "Kurse" },
+    "Hause": { "type": "noun", "gender": "n" },
+    "Jacke": { "type": "noun", "gender": "f", "pluralForm": "Jacken" },
+    "Hügel": { "type": "noun", "gender": "m", "pluralForm": "Hügel" },
+    "Knochen": { "type": "noun", "gender": "m", "pluralForm": "Knochen" },
+    "Berlin": { "type": "noun", "gender": "n" },
+    "München": { "type": "noun", "gender": "n" },
+    "Hamburg": { "type": "noun", "gender": "n" },
+    "Deutschland": { "type": "noun", "gender": "n" },
+    "Geschenk": { "type": "noun", "gender": "n", "pluralForm": "Geschenke" },
+    "Blume": { "type": "noun", "gender": "f", "pluralForm": "Blumen" },
+    "Party": { "type": "noun", "gender": "f", "pluralForm": "Partys" },
+    "Dokument": { "type": "noun", "gender": "n", "pluralForm": "Dokumente" },
+    "Stock": { "type": "noun", "gender": "m", "pluralForm": "Stockwerke" },
+    "Uhr": { "type": "noun", "gender": "f", "pluralForm": "Uhren" },
+    "Platz": { "type": "noun", "gender": "m", "pluralForm": "Plätze" },
+    "Reihe": { "type": "noun", "gender": "f", "pluralForm": "Reihen" },
+    "Glas": { "type": "noun", "gender": "n", "pluralForm": "Gläser" },
+    "Kiste": { "type": "noun", "gender": "f", "pluralForm": "Kisten" },
+    "Patient": { "type": "noun", "gender": "m", "pluralForm": "Patienten" },
+    "Kollege": { "type": "noun", "gender": "m", "pluralForm": "Kollegen" },
+    "Ball": { "type": "noun", "gender": "m", "pluralForm": "Bälle" },
+    "Nachbar": { "type": "noun", "gender": "m", "pluralForm": "Nachbarn" },
+    "Geschichte": { "type": "noun", "gender": "f", "pluralForm": "Geschichten" },
+    "Chef": { "type": "noun", "gender": "m", "pluralForm": "Chefs" },
+    "Geburtstag": { "type": "noun", "gender": "m", "pluralForm": "Geburtstage" },
+    "Paar": { "type": "noun", "gender": "n", "pluralForm": "Paare" },
+    "Kellner": { "type": "noun", "gender": "m", "pluralForm": "Kellner" },
+    "Brücke": { "type": "noun", "gender": "f", "pluralForm": "Brücken" },
+    "Fluss": { "type": "noun", "gender": "m", "pluralForm": "Flüsse" },
+    "Landschaft": { "type": "noun", "gender": "f", "pluralForm": "Landschaften" },
+    "Treffen": { "type": "noun", "gender": "n", "pluralForm": "Treffen" },
+    "Job": { "type": "noun", "gender": "m", "pluralForm": "Jobs" },
+    "Kopfschmerzen": { "type": "noun", "gender": "m" },
+    "Strand": { "type": "noun", "gender": "m", "pluralForm": "Strände" },
+    "Tasche": { "type": "noun", "gender": "f", "pluralForm": "Taschen" },
+    "Markt": { "type": "noun", "gender": "m", "pluralForm": "Märkte" },
+    "Note": { "type": "noun", "gender": "f", "pluralForm": "Noten" },
+    "Weg": { "type": "noun", "gender": "m", "pluralForm": "Wege" },
+    "Lauf": { "type": "noun", "gender": "m", "pluralForm": "Läufe" },
+    "Familie": { "type": "noun", "gender": "f", "pluralForm": "Familien" },
+    "Hand": { "type": "noun", "gender": "f", "pluralForm": "Hände" },
+    "Idee": { "type": "noun", "gender": "f", "pluralForm": "Ideen" },
+    "Eltern": { "type": "noun", "gender": "m" },
+    "Hilfe": { "type": "noun", "gender": "f" },
+    "Hauptstraße": { "type": "noun", "gender": "f", "pluralForm": "Hauptstraßen" },
+    "Stadtzentrum": { "type": "noun", "gender": "n", "pluralForm": "Stadtzentren" },
+    "Essen": { "type": "noun", "gender": "n" },
+    "Bett": { "type": "noun", "gender": "n", "pluralForm": "Betten" }
+  },
+  "adjectives": {
+    "gut": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "gute", "m-accusative": "guten", "m-dative": "gutem", "m-genitive": "guten",
+        "f-nominative": "gute", "f-accusative": "gute", "f-dative": "guter", "f-genitive": "guter",
+        "n-nominative": "gute", "n-accusative": "gutes", "n-dative": "gutem", "n-genitive": "guten"
+      }
+    },
+    "schlecht": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "schlechte", "m-accusative": "schlechten", "m-dative": "schlechtem", "m-genitive": "schlechten",
+        "f-nominative": "schlechte", "f-accusative": "schlechte", "f-dative": "schlechter", "f-genitive": "schlechter",
+        "n-nominative": "schlechte", "n-accusative": "schlechtes", "n-dative": "schlechtem", "n-genitive": "schlechten"
+      }
+    },
+    "groß": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "große", "m-accusative": "großen", "m-dative": "großem", "m-genitive": "großen",
+        "f-nominative": "große", "f-accusative": "große", "f-dative": "großer", "f-genitive": "großer",
+        "n-nominative": "große", "n-accusative": "großes", "n-dative": "großem", "n-genitive": "großen"
+      }
+    },
+    "klein": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "kleine", "m-accusative": "kleinen", "m-dative": "kleinem", "m-genitive": "kleinen",
+        "f-nominative": "kleine", "f-accusative": "kleine", "f-dative": "kleiner", "f-genitive": "kleiner",
+        "n-nominative": "kleine", "n-accusative": "kleines", "n-dative": "kleinem", "n-genitive": "kleinen"
+      }
+    },
+    "alt": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "alte", "m-accusative": "alten", "m-dative": "altem", "m-genitive": "alten",
+        "f-nominative": "alte", "f-accusative": "alte", "f-dative": "alter", "f-genitive": "alter",
+        "n-nominative": "alte", "n-accusative": "altes", "n-dative": "altem", "n-genitive": "alten"
+      }
+    },
+    "jung": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "junge", "m-accusative": "jungen", "m-dative": "jungem", "m-genitive": "jungen",
+        "f-nominative": "junge", "f-accusative": "junge", "f-dative": "junger", "f-genitive": "junger",
+        "n-nominative": "junge", "n-accusative": "junges", "n-dative": "jungem", "n-genitive": "jungen"
+      }
+    },
+    "neu": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "neue", "m-accusative": "neuen", "m-dative": "neuem", "m-genitive": "neuen",
+        "f-nominative": "neue", "f-accusative": "neue", "f-dative": "neuer", "f-genitive": "neuer",
+        "n-nominative": "neue", "n-accusative": "neues", "n-dative": "neuem", "n-genitive": "neuen"
+      }
+    },
+    "schön": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "schöne", "m-accusative": "schönen", "m-dative": "schönem", "m-genitive": "schönen",
+        "f-nominative": "schöne", "f-accusative": "schöne", "f-dative": "schöner", "f-genitive": "schöner",
+        "n-nominative": "schöne", "n-accusative": "schönes", "n-dative": "schönem", "n-genitive": "schönen"
+      }
+    },
+    "nett": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "nette", "m-accusative": "netten", "m-dative": "nettem", "m-genitive": "netten",
+        "f-nominative": "nette", "f-accusative": "nette", "f-dative": "netter", "f-genitive": "netter",
+        "n-nominative": "nette", "n-accusative": "nettes", "n-dative": "nettem", "n-genitive": "netten"
+      }
+    },
+    "kalt": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "kalte", "m-accusative": "kalten", "m-dative": "kaltem", "m-genitive": "kalten",
+        "f-nominative": "kalte", "f-accusative": "kalte", "f-dative": "kalter", "f-genitive": "kalter",
+        "n-nominative": "kalte", "n-accusative": "kaltes", "n-dative": "kaltem", "n-genitive": "kalten"
+      }
+    },
+    "warm": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "warme", "m-accusative": "warmen", "m-dative": "warmem", "m-genitive": "warmen",
+        "f-nominative": "warme", "f-accusative": "warme", "f-dative": "warmer", "f-genitive": "warmer",
+        "n-nominative": "warme", "n-accusative": "warmes", "n-dative": "warmem", "n-genitive": "warmen"
+      }
+    },
+    "heiß": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "heiße", "m-accusative": "heißen", "m-dative": "heißem", "m-genitive": "heißen",
+        "f-nominative": "heiße", "f-accusative": "heiße", "f-dative": "heißer", "f-genitive": "heißer",
+        "n-nominative": "heiße", "n-accusative": "heißes", "n-dative": "heißem", "n-genitive": "heißen"
+      }
+    },
+    "schnell": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "schnelle", "m-accusative": "schnellen", "m-dative": "schnellem", "m-genitive": "schnellen",
+        "f-nominative": "schnelle", "f-accusative": "schnelle", "f-dative": "schneller", "f-genitive": "schneller",
+        "n-nominative": "schnelle", "n-accusative": "schnelles", "n-dative": "schnellem", "n-genitive": "schnellen"
+      }
+    },
+    "langsam": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "langsame", "m-accusative": "langsamen", "m-dative": "langsamem", "m-genitive": "langsamen",
+        "f-nominative": "langsame", "f-accusative": "langsame", "f-dative": "langsamer", "f-genitive": "langsamer",
+        "n-nominative": "langsame", "n-accusative": "langsames", "n-dative": "langsamem", "n-genitive": "langsamen"
+      }
+    },
+    "teuer": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "teure", "m-accusative": "teuren", "m-dative": "teurem", "m-genitive": "teuren",
+        "f-nominative": "teure", "f-accusative": "teure", "f-dative": "teurer", "f-genitive": "teurer",
+        "n-nominative": "teure", "n-accusative": "teures", "n-dative": "teurem", "n-genitive": "teuren"
+      }
+    },
+    "billig": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "billige", "m-accusative": "billigen", "m-dative": "billigem", "m-genitive": "billigen",
+        "f-nominative": "billige", "f-accusative": "billige", "f-dative": "billiger", "f-genitive": "billiger",
+        "n-nominative": "billige", "n-accusative": "billiges", "n-dative": "billigem", "n-genitive": "billigen"
+      }
+    },
+    "müde": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "müde", "m-accusative": "müden", "m-dative": "müdem", "m-genitive": "müden",
+        "f-nominative": "müde", "f-accusative": "müde", "f-dative": "müder", "f-genitive": "müder",
+        "n-nominative": "müde", "n-accusative": "müdes", "n-dative": "müdem", "n-genitive": "müden"
+      }
+    },
+    "interessant": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "interessante", "m-accusative": "interessanten", "m-dative": "interessantem", "m-genitive": "interessanten",
+        "f-nominative": "interessante", "f-accusative": "interessante", "f-dative": "interessanter", "f-genitive": "interessanter",
+        "n-nominative": "interessante", "n-accusative": "interessantes", "n-dative": "interessantem", "n-genitive": "interessanten"
+      }
+    },
+    "langweilig": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "langweilige", "m-accusative": "langweiligen", "m-dative": "langweiligem", "m-genitive": "langweiligen",
+        "f-nominative": "langweilige", "f-accusative": "langweilige", "f-dative": "langweiliger", "f-genitive": "langweiliger",
+        "n-nominative": "langweilige", "n-accusative": "langweiliges", "n-dative": "langweiligem", "n-genitive": "langweiligen"
+      }
+    },
+    "wichtig": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "wichtige", "m-accusative": "wichtigen", "m-dative": "wichtigem", "m-genitive": "wichtigen",
+        "f-nominative": "wichtige", "f-accusative": "wichtige", "f-dative": "wichtiger", "f-genitive": "wichtiger",
+        "n-nominative": "wichtige", "n-accusative": "wichtiges", "n-dative": "wichtigem", "n-genitive": "wichtigen"
+      }
+    },
+    "schwer": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "schwere", "m-accusative": "schweren", "m-dative": "schwerem", "m-genitive": "schweren",
+        "f-nominative": "schwere", "f-accusative": "schwere", "f-dative": "schwerer", "f-genitive": "schwerer",
+        "n-nominative": "schwere", "n-accusative": "schweres", "n-dative": "schwerem", "n-genitive": "schweren"
+      }
+    },
+    "leicht": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "leichte", "m-accusative": "leichten", "m-dative": "leichtem", "m-genitive": "leichten",
+        "f-nominative": "leichte", "f-accusative": "leichte", "f-dative": "leichter", "f-genitive": "leichter",
+        "n-nominative": "leichte", "n-accusative": "leichtes", "n-dative": "leichtem", "n-genitive": "leichten"
+      }
+    },
+    "lecker": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "leckere", "m-accusative": "leckeren", "m-dative": "leckerem", "m-genitive": "leckeren",
+        "f-nominative": "leckere", "f-accusative": "leckere", "f-dative": "leckerer", "f-genitive": "leckerer",
+        "n-nominative": "leckere", "n-accusative": "leckeres", "n-dative": "leckerem", "n-genitive": "leckeren"
+      }
+    },
+    "frisch": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "frische", "m-accusative": "frischen", "m-dative": "frischem", "m-genitive": "frischen",
+        "f-nominative": "frische", "f-accusative": "frische", "f-dative": "frischer", "f-genitive": "frischer",
+        "n-nominative": "frische", "n-accusative": "frisches", "n-dative": "frischem", "n-genitive": "frischen"
+      }
+    },
+    "frei": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "freie", "m-accusative": "freien", "m-dative": "freiem", "m-genitive": "freien",
+        "f-nominative": "freie", "f-accusative": "freie", "f-dative": "freier", "f-genitive": "freier",
+        "n-nominative": "freie", "n-accusative": "freies", "n-dative": "freiem", "n-genitive": "freien"
+      }
+    },
+    "freundlich": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "freundliche", "m-accusative": "freundlichen", "m-dative": "freundlichem", "m-genitive": "freundlichen",
+        "f-nominative": "freundliche", "f-accusative": "freundliche", "f-dative": "freundlicher", "f-genitive": "freundlicher",
+        "n-nominative": "freundliche", "n-accusative": "freundliches", "n-dative": "freundlichem", "n-genitive": "freundlichen"
+      }
+    },
+    "klug": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "kluge", "m-accusative": "klugen", "m-dative": "klugem", "m-genitive": "klugen",
+        "f-nominative": "kluge", "f-accusative": "kluge", "f-dative": "kluger", "f-genitive": "kluger",
+        "n-nominative": "kluge", "n-accusative": "kluges", "n-dative": "klugem", "n-genitive": "klugen"
+      }
+    },
+    "krank": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "kranke", "m-accusative": "kranken", "m-dative": "krankem", "m-genitive": "kranken",
+        "f-nominative": "kranke", "f-accusative": "kranke", "f-dative": "kranker", "f-genitive": "kranker",
+        "n-nominative": "kranke", "n-accusative": "krankes", "n-dative": "krankem", "n-genitive": "kranken"
+      }
+    },
+    "glücklich": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "glückliche", "m-accusative": "glücklichen", "m-dative": "glücklichem", "m-genitive": "glücklichen",
+        "f-nominative": "glückliche", "f-accusative": "glückliche", "f-dative": "glücklicher", "f-genitive": "glücklicher",
+        "n-nominative": "glückliche", "n-accusative": "glückliches", "n-dative": "glücklichem", "n-genitive": "glücklichen"
+      }
+    },
+    "kaputt": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "kaputte", "m-accusative": "kaputten", "m-dative": "kaputtem", "m-genitive": "kaputten",
+        "f-nominative": "kaputte", "f-accusative": "kaputte", "f-dative": "kaputter", "f-genitive": "kaputter",
+        "n-nominative": "kaputte", "n-accusative": "kaputtes", "n-dative": "kaputtem", "n-genitive": "kaputten"
+      }
+    },
+    "laut": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "laute", "m-accusative": "lauten", "m-dative": "lautem", "m-genitive": "lauten",
+        "f-nominative": "laute", "f-accusative": "laute", "f-dative": "lauter", "f-genitive": "lauter",
+        "n-nominative": "laute", "n-accusative": "lautes", "n-dative": "lautem", "n-genitive": "lauten"
+      }
+    },
+    "ruhig": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "ruhige", "m-accusative": "ruhigen", "m-dative": "ruhigem", "m-genitive": "ruhigen",
+        "f-nominative": "ruhige", "f-accusative": "ruhige", "f-dative": "ruhiger", "f-genitive": "ruhiger",
+        "n-nominative": "ruhige", "n-accusative": "ruhiges", "n-dative": "ruhigem", "n-genitive": "ruhigen"
+      }
+    },
+    "streng": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "strenge", "m-accusative": "strengen", "m-dative": "strengem", "m-genitive": "strengen",
+        "f-nominative": "strenge", "f-accusative": "strenge", "f-dative": "strenger", "f-genitive": "strenger",
+        "n-nominative": "strenge", "n-accusative": "strenges", "n-dative": "strengem", "n-genitive": "strengen"
+      }
+    },
+    "fröhlich": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "fröhliche", "m-accusative": "fröhlichen", "m-dative": "fröhlichem", "m-genitive": "fröhlichen",
+        "f-nominative": "fröhliche", "f-accusative": "fröhliche", "f-dative": "fröhlicher", "f-genitive": "fröhlicher",
+        "n-nominative": "fröhliche", "n-accusative": "fröhliches", "n-dative": "fröhlichem", "n-genitive": "fröhlichen"
+      }
+    },
+    "breit": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "breite", "m-accusative": "breiten", "m-dative": "breitem", "m-genitive": "breiten",
+        "f-nominative": "breite", "f-accusative": "breite", "f-dative": "breiter", "f-genitive": "breiter",
+        "n-nominative": "breite", "n-accusative": "breites", "n-dative": "breitem", "n-genitive": "breiten"
+      }
+    },
+    "kurz": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "kurze", "m-accusative": "kurzen", "m-dative": "kurzem", "m-genitive": "kurzen",
+        "f-nominative": "kurze", "f-accusative": "kurze", "f-dative": "kurzer", "f-genitive": "kurzer",
+        "n-nominative": "kurze", "n-accusative": "kurzes", "n-dative": "kurzem", "n-genitive": "kurzen"
+      }
+    },
+    "lang": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "lange", "m-accusative": "langen", "m-dative": "langem", "m-genitive": "langen",
+        "f-nominative": "lange", "f-accusative": "lange", "f-dative": "langer", "f-genitive": "langer",
+        "n-nominative": "lange", "n-accusative": "langes", "n-dative": "langem", "n-genitive": "langen"
+      }
+    },
+    "erfahren": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "erfahrene", "m-accusative": "erfahrenen", "m-dative": "erfahrenem", "m-genitive": "erfahrenen",
+        "f-nominative": "erfahrene", "f-accusative": "erfahrene", "f-dative": "erfahrener", "f-genitive": "erfahrener",
+        "n-nominative": "erfahrene", "n-accusative": "erfahrenes", "n-dative": "erfahrenem", "n-genitive": "erfahrenen"
+      }
+    },
+    "hungrig": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "hungrige", "m-accusative": "hungrigen", "m-dative": "hungrigem", "m-genitive": "hungrigen",
+        "f-nominative": "hungrige", "f-accusative": "hungrige", "f-dative": "hungriger", "f-genitive": "hungriger",
+        "n-nominative": "hungrige", "n-accusative": "hungriges", "n-dative": "hungrigem", "n-genitive": "hungrigen"
+      }
+    },
+    "traurig": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "traurige", "m-accusative": "traurigen", "m-dative": "traurigem", "m-genitive": "traurigen",
+        "f-nominative": "traurige", "f-accusative": "traurige", "f-dative": "trauriger", "f-genitive": "trauriger",
+        "n-nominative": "traurige", "n-accusative": "trauriges", "n-dative": "traurigem", "n-genitive": "traurigen"
+      }
+    },
+    "richtig": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "richtige", "m-accusative": "richtigen", "m-dative": "richtigem", "m-genitive": "richtigen",
+        "f-nominative": "richtige", "f-accusative": "richtige", "f-dative": "richtiger", "f-genitive": "richtiger",
+        "n-nominative": "richtige", "n-accusative": "richtiges", "n-dative": "richtigem", "n-genitive": "richtigen"
+      }
+    },
+    "grün": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "grüne", "m-accusative": "grünen", "m-dative": "grünem", "m-genitive": "grünen",
+        "f-nominative": "grüne", "f-accusative": "grüne", "f-dative": "grüner", "f-genitive": "grüner",
+        "n-nominative": "grüne", "n-accusative": "grünes", "n-dative": "grünem", "n-genitive": "grünen"
+      }
+    },
+    "täglich": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "tägliche", "m-accusative": "täglichen", "m-dative": "täglichem", "m-genitive": "täglichen",
+        "f-nominative": "tägliche", "f-accusative": "tägliche", "f-dative": "täglicher", "f-genitive": "täglicher",
+        "n-nominative": "tägliche", "n-accusative": "tägliches", "n-dative": "täglichem", "n-genitive": "täglichen"
+      }
+    },
+    "lieb": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "liebe", "m-accusative": "lieben", "m-dative": "liebem", "m-genitive": "lieben",
+        "f-nominative": "liebe", "f-accusative": "liebe", "f-dative": "lieber", "f-genitive": "lieber",
+        "n-nominative": "liebe", "n-accusative": "liebes", "n-dative": "liebem", "n-genitive": "lieben"
+      }
+    },
+    "best": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "beste", "m-accusative": "besten", "m-dative": "bestem", "m-genitive": "besten",
+        "f-nominative": "beste", "f-accusative": "beste", "f-dative": "bester", "f-genitive": "bester",
+        "n-nominative": "beste", "n-accusative": "bestes", "n-dative": "bestem", "n-genitive": "besten"
+      }
+    },
+    "verschieden": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "verschiedene", "m-accusative": "verschiedenen", "m-dative": "verschiedenem", "m-genitive": "verschiedenen",
+        "f-nominative": "verschiedene", "f-accusative": "verschiedene", "f-dative": "verschiedener", "f-genitive": "verschiedener",
+        "n-nominative": "verschiedene", "n-accusative": "verschiedenes", "n-dative": "verschiedenem", "n-genitive": "verschiedenen"
+      }
+    },
+    "stark": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "starke", "m-accusative": "starken", "m-dative": "starkem", "m-genitive": "starken",
+        "f-nominative": "starke", "f-accusative": "starke", "f-dative": "starker", "f-genitive": "starker",
+        "n-nominative": "starke", "n-accusative": "starkes", "n-dative": "starkem", "n-genitive": "starken"
+      }
+    },
+    "älter": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "ältere", "m-accusative": "älteren", "m-dative": "älterem", "m-genitive": "älteren",
+        "f-nominative": "ältere", "f-accusative": "ältere", "f-dative": "älterer", "f-genitive": "älterer",
+        "n-nominative": "ältere", "n-accusative": "älteres", "n-dative": "älterem", "n-genitive": "älteren"
+      }
+    },
+    "jünger": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "jüngere", "m-accusative": "jüngeren", "m-dative": "jüngerem", "m-genitive": "jüngeren",
+        "f-nominative": "jüngere", "f-accusative": "jüngere", "f-dative": "jüngerer", "f-genitive": "jüngerer",
+        "n-nominative": "jüngere", "n-accusative": "jüngeres", "n-dative": "jüngerem", "n-genitive": "jüngeren"
+      }
+    },
+    "deutsch": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "deutsche", "m-accusative": "deutschen", "m-dative": "deutschem", "m-genitive": "deutschen",
+        "f-nominative": "deutsche", "f-accusative": "deutsche", "f-dative": "deutscher", "f-genitive": "deutscher",
+        "n-nominative": "deutsche", "n-accusative": "deutsches", "n-dative": "deutschem", "n-genitive": "deutschen"
+      }
+    }
+  },
+  "articles": {
+    "definite": {
+      "type": "article",
+      "baseForm": "das",
+      "forms": ["der", "die", "das", "den", "dem", "des"]
+    },
+    "indefinite": {
+      "type": "article",
+      "baseForm": "ein",
+      "forms": ["ein", "eine", "einen", "einem", "einer", "eines"]
+    },
+    "kein": {
+      "type": "article",
+      "baseForm": "kein",
+      "forms": ["kein", "keine", "keinen", "keinem", "keiner", "keines"]
+    }
+  },
+  "pronouns": {
+    "ich": { "type": "pronoun" },
+    "du": { "type": "pronoun" },
+    "er": { "type": "pronoun" },
+    "sie": { "type": "pronoun" },
+    "es": { "type": "pronoun" },
+    "wir": { "type": "pronoun" },
+    "ihr": { "type": "pronoun" },
+    "man": { "type": "pronoun" }
+  },
+  "possessives": {
+    "mein": {
+      "type": "possessive",
+      "baseForm": "mein",
+      "forms": ["mein", "meine", "meinen", "meinem", "meiner", "meines"]
+    },
+    "dein": {
+      "type": "possessive",
+      "baseForm": "dein",
+      "forms": ["dein", "deine", "deinen", "deinem", "deiner", "deines"]
+    },
+    "sein": {
+      "type": "possessive",
+      "baseForm": "sein",
+      "forms": ["sein", "seine", "seinen", "seinem", "seiner", "seines"]
+    },
+    "ihr-poss": {
+      "type": "possessive",
+      "baseForm": "ihr",
+      "forms": ["ihr", "ihre", "ihren", "ihrem", "ihrer", "ihres"]
+    },
+    "unser": {
+      "type": "possessive",
+      "baseForm": "unser",
+      "forms": ["unser", "unsere", "unseren", "unserem", "unserer", "unseres"]
+    }
+  },
+  "prepositions": {
+    "in": { "type": "preposition" },
+    "an": { "type": "preposition" },
+    "auf": { "type": "preposition" },
+    "zu": { "type": "preposition" },
+    "von": { "type": "preposition" },
+    "bei": { "type": "preposition" },
+    "mit": { "type": "preposition" },
+    "für": { "type": "preposition" },
+    "um": { "type": "preposition" },
+    "nach": { "type": "preposition" },
+    "aus": { "type": "preposition" },
+    "über": { "type": "preposition" },
+    "unter": { "type": "preposition" },
+    "vor": { "type": "preposition" },
+    "hinter": { "type": "preposition" },
+    "neben": { "type": "preposition" },
+    "zwischen": { "type": "preposition" },
+    "ohne": { "type": "preposition" },
+    "gegen": { "type": "preposition" },
+    "durch": { "type": "preposition" }
+  },
+  "adverbs": {
+    "heute": { "type": "adverb" },
+    "morgen": { "type": "adverb" },
+    "gestern": { "type": "adverb" },
+    "jetzt": { "type": "adverb" },
+    "später": { "type": "adverb" },
+    "bald": { "type": "adverb" },
+    "immer": { "type": "adverb" },
+    "oft": { "type": "adverb" },
+    "manchmal": { "type": "adverb" },
+    "nie": { "type": "adverb" },
+    "hier": { "type": "adverb" },
+    "dort": { "type": "adverb" },
+    "oben": { "type": "adverb" },
+    "unten": { "type": "adverb" },
+    "links": { "type": "adverb" },
+    "rechts": { "type": "adverb" },
+    "gut": { "type": "adverb" },
+    "schlecht": { "type": "adverb" },
+    "schnell": { "type": "adverb" },
+    "langsam": { "type": "adverb" },
+    "gern": { "type": "adverb" },
+    "sehr": { "type": "adverb" },
+    "auch": { "type": "adverb" },
+    "nicht": { "type": "adverb" },
+    "schon": { "type": "adverb" },
+    "noch": { "type": "adverb" },
+    "vielleicht": { "type": "adverb" },
+    "leider": { "type": "adverb" },
+    "natürlich": { "type": "adverb" },
+    "zusammen": { "type": "adverb" },
+    "allein": { "type": "adverb" },
+    "draußen": { "type": "adverb" },
+    "drinnen": { "type": "adverb" },
+    "früh": { "type": "adverb" },
+    "spät": { "type": "adverb" },
+    "morgens": { "type": "adverb" },
+    "abends": { "type": "adverb" },
+    "wieder": { "type": "adverb" },
+    "also": { "type": "adverb" },
+    "dann": { "type": "adverb" },
+    "endlich": { "type": "adverb" },
+    "eins": { "type": "adverb" },
+    "zwei": { "type": "adverb" },
+    "drei": { "type": "adverb" },
+    "vier": { "type": "adverb" },
+    "fünf": { "type": "adverb" },
+    "sechs": { "type": "adverb" },
+    "sieben": { "type": "adverb" },
+    "acht": { "type": "adverb" },
+    "neun": { "type": "adverb" },
+    "zehn": { "type": "adverb" },
+    "elf": { "type": "adverb" },
+    "zwölf": { "type": "adverb" },
+    "besser": { "type": "adverb" },
+    "weiter": { "type": "adverb" },
+    "raus": { "type": "adverb" },
+    "etwas": { "type": "adverb" },
+    "viel": { "type": "adverb" },
+    "zu": { "type": "adverb" },
+    "froh": { "type": "adverb" },
+    "überrascht": { "type": "adverb" },
+    "jeden": { "type": "adverb" },
+    "bis": { "type": "adverb" },
+    "ab": { "type": "adverb" }
+  },
+  "conjunctions": {
+    "und": { "type": "conjunction" },
+    "oder": { "type": "conjunction" },
+    "aber": { "type": "conjunction" },
+    "denn": { "type": "conjunction" },
+    "weil": { "type": "conjunction" },
+    "dass": { "type": "conjunction" },
+    "wenn": { "type": "conjunction" },
+    "obwohl": { "type": "conjunction" },
+    "als": { "type": "conjunction" },
+    "bevor": { "type": "conjunction" },
+    "nachdem": { "type": "conjunction" },
+    "damit": { "type": "conjunction" },
+    "während": { "type": "conjunction" },
+    "so": { "type": "conjunction" }
+  }
+}

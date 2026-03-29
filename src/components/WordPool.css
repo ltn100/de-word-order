@@ -1,0 +1,43 @@
+.word-pool {
+  background: var(--bg-card-alt);
+  border: 2px dashed var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 150px;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.word-pool.drag-over {
+  border-color: var(--accent-primary);
+  background: var(--pool-drag-bg);
+}
+
+.pool-title {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pool-hint {
+  margin: 0 0 16px 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.pool-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  min-height: 60px;
+}
+
+.pool-empty {
+  color: var(--text-placeholder);
+  font-style: italic;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}

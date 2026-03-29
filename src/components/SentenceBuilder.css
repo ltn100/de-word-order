@@ -1,0 +1,161 @@
+.sentence-builder {
+  background: var(--bg-card);
+  border: 3px solid var(--accent-primary);
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 120px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.sentence-builder.drag-over {
+  border-color: var(--accent-secondary);
+  background: var(--builder-drag-bg);
+}
+
+.sentence-builder.empty {
+  border-style: dashed;
+}
+
+.builder-title {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.builder-area {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.builder-placeholder {
+  color: var(--text-placeholder);
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.builder-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+}
+
+.sortable-word {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: grab;
+  user-select: none;
+  border: 2px solid var(--word-border);
+  box-shadow: 0 2px 4px var(--shadow-color-medium);
+  transition: box-shadow 0.2s, transform 0.15s ease-out, margin 0.15s ease-out;
+  touch-action: none;
+}
+
+.sortable-word:hover {
+  box-shadow: 0 4px 8px var(--shadow-color-strong);
+}
+
+.sortable-word.dragging {
+  cursor: grabbing;
+  box-shadow: 0 8px 20px var(--shadow-color-strong);
+  opacity: 0.9;
+}
+
+.sortable-word .word-text {
+  color: var(--word-text);
+}
+
+.sortable-word .menu-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--word-text);
+  background: rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+  margin-left: 6px;
+  padding: 2px 6px;
+  min-width: 28px;
+  min-height: 28px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.sortable-word .menu-indicator:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.sortable-word .menu-indicator:active {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Keep menu indicator visible when disabled (read-only mode) */
+.sortable-word.disabled {
+  cursor: default;
+}
+
+.sortable-word.disabled .menu-indicator {
+  cursor: pointer;
+}
+
+/* Gap before this word - animates word to the right */
+.sortable-word.gap-before {
+  margin-left: 60px;
+}
+
+/* End gap indicator - shows when inserting at end of sentence */
+.end-gap {
+  width: 60px;
+  min-height: 44px;
+  flex-shrink: 0;
+  transition: width 0.15s ease-out;
+}
+
+/* Word with join button wrapper */
+.word-with-join {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Join button between words that can be contracted */
+.join-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.15s, background-color 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 4px var(--shadow-color-medium);
+}
+
+.join-button:hover {
+  transform: scale(1.15);
+  background: var(--accent-secondary);
+  box-shadow: 0 4px 8px var(--shadow-color-strong);
+}
+
+.join-button:active {
+  transform: scale(1.05);
+}

@@ -1,0 +1,136 @@
+.context-menu {
+  position: fixed;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color-dark);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px var(--shadow-color-strong);
+  padding: 6px 0;
+  min-width: 160px;
+  z-index: 1000;
+  animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.context-menu-item {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-primary);
+  transition: background-color 0.15s;
+}
+
+.context-menu-item:hover {
+  background-color: var(--bg-hover);
+}
+
+.context-menu-item:active {
+  background-color: var(--bg-active);
+}
+
+.context-menu-item.has-color {
+  color: var(--word-text);
+  font-weight: 500;
+  border-radius: 4px;
+  margin: 2px 6px;
+  width: calc(100% - 12px);
+}
+
+.context-menu-item.has-color:hover {
+  filter: brightness(1.1);
+  background-color: inherit;
+}
+
+.context-menu-item.has-color:active {
+  filter: brightness(0.9);
+  background-color: inherit;
+}
+
+.context-menu-divider {
+  height: 1px;
+  background: var(--border-color-light);
+  margin: 6px 0;
+}
+
+/* Article matrix layout */
+.article-matrix {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px;
+}
+
+.article-matrix-row {
+  display: flex;
+  gap: 2px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.article-matrix-cell {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--word-text);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  min-width: 50px;
+  text-align: center;
+}
+
+.article-matrix-cell:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.article-matrix-cell:active {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Base form row for predicate adjectives */
+.base-form-row {
+  background-color: var(--bg-card-alt);
+  border: 1px solid var(--border-color);
+  margin-bottom: 4px;
+}
+
+.base-form-cell {
+  color: var(--text-primary);
+  background: transparent;
+}
+
+.base-form-cell:hover {
+  background: var(--bg-hover);
+}
+
+/* Read-only mode */
+.context-menu.read-only .context-menu-item,
+.context-menu.read-only .article-matrix-cell {
+  cursor: default;
+  opacity: 0.8;
+}
+
+.context-menu.read-only .context-menu-item:hover,
+.context-menu.read-only .article-matrix-cell:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.context-menu.read-only .context-menu-item:hover {
+  background-color: transparent;
+}
