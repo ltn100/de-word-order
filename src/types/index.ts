@@ -37,6 +37,7 @@ export interface Word {
   baseForm: string;       // Infinitive/nominative/base form shown initially
   correctForm: string;    // What it should be in the correct sentence
   position: number;       // Correct position in sentence (0-indexed)
+  grammaticalCase?: Case; // The grammatical case this word is in
 
   // For nouns
   gender?: Gender;

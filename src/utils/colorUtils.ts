@@ -8,7 +8,7 @@ export const colorConfig: ColorConfig = {
     f: '#FFB6C1',  // Pink - feminine
     n: '#98FB98',  // Mint - neuter
   },
-  verb: '#DDA0DD',       // Purple
+  verb: '#B19CD9',       // Purple
   article: '#FFFFFF',    // No color (white)
   adjective: '#FFEB99',  // Yellow
   adverb: '#FFFFFF',     // No color (white)

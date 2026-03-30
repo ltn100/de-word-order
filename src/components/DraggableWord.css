@@ -10,8 +10,10 @@
   user-select: none;
   border: 2px solid var(--word-border);
   box-shadow: 0 2px 4px var(--shadow-color-medium);
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.2s, transform 0.15s ease-out, margin 0.15s ease-out;
   touch-action: none;
+  min-height: 52px; /* Ensures consistent height: 10px padding + 28px content (menu height) + 10px padding + 4px border */
+  box-sizing: border-box;
 }
 
 .draggable-word:hover {
@@ -66,4 +68,9 @@
 
 .draggable-word.disabled .menu-indicator {
   cursor: pointer;
+}
+
+/* Gap before this word - animates word to the right when dragging from pool */
+.draggable-word.gap-before {
+  margin-left: 60px;
 }

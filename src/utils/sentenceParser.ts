@@ -1,4 +1,4 @@
-import type { Word } from '../types';
+import type { Word, Case } from '../types';
 import vocabularyData from '../data/vocabulary.json';
 
 // Contractions map: contraction -> [preposition, article form]
@@ -22,6 +22,65 @@ const ARTICLE_TYPE_MAP: Record<string, 'definite' | 'indefinite' | 'kein'> = {
   'kein': 'kein', 'keine': 'kein', 'keinen': 'kein',
   'keinem': 'kein', 'keiner': 'kein', 'keines': 'kein',
 };
+
+// Determine grammatical case from article/possessive form
+// Returns case and gender when determinable
+function determineCaseFromForm(form: string): { case: Case; gender?: 'm' | 'f' | 'n' } | null {
+  const f = form.toLowerCase();
+
+  // Definite articles
+  if (f === 'der') return { case: 'nominative', gender: 'm' }; // Could also be dative/genitive fem
+  if (f === 'die') return { case: 'nominative', gender: 'f' }; // Could also be accusative fem or plural
+  if (f === 'das') return { case: 'nominative', gender: 'n' }; // Could also be accusative neut
+  if (f === 'den') return { case: 'accusative', gender: 'm' };
+  if (f === 'dem') return { case: 'dative' }; // masc or neut
+  if (f === 'des') return { case: 'genitive' }; // masc or neut
+
+  // Indefinite articles
+  if (f === 'ein') return { case: 'nominative' }; // masc nom or neut nom/acc
+  if (f === 'eine') return { case: 'nominative', gender: 'f' }; // fem nom or acc
+  if (f === 'einen') return { case: 'accusative', gender: 'm' };
+  if (f === 'einem') return { case: 'dative' }; // masc or neut
+  if (f === 'einer') return { case: 'dative', gender: 'f' }; // Could also be genitive
+  if (f === 'eines') return { case: 'genitive' }; // masc or neut
+
+  // Kein forms
+  if (f === 'kein') return { case: 'nominative' }; // masc nom or neut nom/acc
+  if (f === 'keine') return { case: 'nominative', gender: 'f' }; // fem nom/acc or plural
+  if (f === 'keinen') return { case: 'accusative', gender: 'm' };
+  if (f === 'keinem') return { case: 'dative' }; // masc or neut
+  if (f === 'keiner') return { case: 'dative', gender: 'f' }; // Could also be genitive
+  if (f === 'keines') return { case: 'genitive' }; // masc or neut
+
+  // Possessive base forms (nominative masculine/neuter)
+  const possessiveBases = ['mein', 'dein', 'sein', 'ihr', 'unser', 'euer'];
+  if (possessiveBases.includes(f)) return { case: 'nominative' };
+
+  // Possessive with -e ending (nominative/accusative feminine, or nominative plural)
+  if (possessiveBases.some(p => f === p + 'e')) return { case: 'nominative', gender: 'f' };
+
+  // Possessive endings (mein, dein, sein, ihr, unser, euer, Ihr)
+  // These follow the same pattern as ein/kein
+  if (f.endsWith('en') && !f.endsWith('nen')) return { case: 'accusative', gender: 'm' }; // meinen, deinen, etc
+  if (f.endsWith('em')) return { case: 'dative' }; // meinem, deinem, etc
+  if (f.endsWith('er') && f !== 'der') return { case: 'dative', gender: 'f' }; // meiner, deiner, etc
+  if (f.endsWith('es') && f !== 'des' && f !== 'das') return { case: 'genitive' }; // meines, deines, etc
+
+  // Unambiguous dative pronouns (object forms only)
+  if (f === 'mir' || f === 'dir' || f === 'ihm' || f === 'ihnen') {
+    return { case: 'dative' };
+  }
+
+  // Unambiguous accusative pronouns (object forms only)
+  if (f === 'mich' || f === 'dich' || f === 'ihn') {
+    return { case: 'accusative' };
+  }
+
+  // Note: "sie", "es", "ihr", "uns", "euch" are ambiguous (can be nominative or accusative/dative)
+  // These get their case from sentence position instead
+
+  return null;
+}
 
 interface VocabPossessive {
   type: 'possessive';
@@ -155,13 +214,11 @@ export function parseSentence(sentence: CompactSentence): Word[] {
   const separableVerbs = hints.separable || [];
 
   // Build maps for separable verb handling
-  const separablePrefixes = new Set<string>();
   const stemToSeparable = new Map<string, string>(); // e.g., "fahren" -> "abfahren"
   const prefixToSeparable = new Map<string, string>(); // e.g., "auf" -> "aufräumen"
   for (const verbBase of separableVerbs) {
     const verbData = vocab.verbs[verbBase];
     if (verbData?.prefix && verbData?.stem) {
-      separablePrefixes.add(verbData.prefix.toLowerCase());
       stemToSeparable.set(verbData.stem.toLowerCase(), verbBase);
       prefixToSeparable.set(verbData.prefix.toLowerCase(), verbBase);
     }
@@ -177,39 +234,52 @@ export function parseSentence(sentence: CompactSentence): Word[] {
     const tokenLower = token.toLowerCase();
     const isFirstWord = i === 0;
 
+    // Handle separable verb prefixes - create word but it will be filtered from word pool
+    // The word pool filters out words ending with "-prefix" (see useGameState)
+    // This word is needed for the correct answer feedback display
+    const separableBase = prefixToSeparable.get(tokenLower);
+    if (separableBase) {
+      prefixPositions.set(separableBase, position);
+      // Create prefix word with "-prefix" suffix so it's filtered from initial word pool
+      // but still appears in the correct answer feedback
+      words.push({
+        id: `${sentence.id}-${separableBase}-prefix`,
+        type: 'verb',
+        baseForm: tokenLower,
+        correctForm: token,
+        position: position++,
+      });
+      continue;
+    }
+
     // Check if this is a contraction that should be split
     if (contractionSet.has(tokenLower) && CONTRACTIONS[tokenLower]) {
       const [prep, artForm] = CONTRACTIONS[tokenLower];
       const artType = ARTICLE_TYPE_MAP[artForm];
+      const caseInfo = determineCaseFromForm(artForm);
 
       // Add preposition (with contraction as correctForm)
+      // Store the governed case on the preposition so it propagates to following nouns
       words.push({
         id: `${sentence.id}-w${words.length + 1}`,
         type: 'preposition',
         baseForm: prep,
         correctForm: token,
         position: position++,
+        grammaticalCase: caseInfo?.case,
       });
 
       // Add article with position -1 (hidden, joins with prep)
       words.push({
         id: `${sentence.id}-w${words.length + 1}`,
         type: 'article',
-        baseForm: artForm,
+        baseForm: vocab.articles[artType].baseForm,
         correctForm: artForm,
         position: -1,
         forms: vocab.articles[artType].forms,
+        grammaticalCase: caseInfo?.case,
       });
 
-      continue;
-    }
-
-    // Track separable verb prefix positions but don't create separate words
-    if (separablePrefixes.has(tokenLower)) {
-      const separableBase = prefixToSeparable.get(tokenLower);
-      if (separableBase) {
-        prefixPositions.set(separableBase, position++);
-      }
       continue;
     }
 
@@ -231,6 +301,53 @@ export function parseSentence(sentence: CompactSentence): Word[] {
     }
   }
 
+  // Propagate case from prepositions/articles to following nouns and adjectives
+  // Sort by position first to process in order (exclude hidden words with position -1)
+  const sortedWords = [...words]
+    .filter((w) => w.position >= 0)
+    .sort((a, b) => a.position - b.position);
+  let currentCase: Case | undefined;
+  let caseFromPreposition = false; // Track if case comes from a governing preposition
+
+  for (const word of sortedWords) {
+    if (word.type === 'preposition' && word.grammaticalCase) {
+      // Preposition with governed case (mit, von, zu, etc.) - this takes precedence
+      currentCase = word.grammaticalCase;
+      caseFromPreposition = true;
+    } else if (word.type === 'preposition' && !word.grammaticalCase) {
+      // Two-way preposition without fixed case - will get case from following article
+      currentCase = undefined;
+      caseFromPreposition = false;
+    } else if (word.type === 'article') {
+      if (caseFromPreposition && currentCase) {
+        // Preposition governs this article - override its form-based case
+        word.grammaticalCase = currentCase;
+      } else if (word.grammaticalCase) {
+        // No governing preposition - use article's own case
+        currentCase = word.grammaticalCase;
+      }
+    } else if (currentCase && (word.type === 'noun' || word.type === 'adjective')) {
+      word.grammaticalCase = currentCase;
+      // Reset case after noun (end of noun phrase)
+      if (word.type === 'noun') {
+        currentCase = undefined;
+        caseFromPreposition = false;
+      }
+    } else if (word.type === 'verb' || word.type === 'conjunction') {
+      // Reset case at verbs, conjunctions (start of new phrase)
+      currentCase = undefined;
+      caseFromPreposition = false;
+    }
+  }
+
+  // Handle subject pronouns (ich, du, er, sie, es, wir, ihr, Sie) as nominative
+  const subjectPronouns = ['ich', 'du', 'er', 'sie', 'es', 'wir', 'ihr'];
+  for (const word of words) {
+    if (word.type === 'pronoun' && subjectPronouns.includes(word.baseForm.toLowerCase()) && !word.grammaticalCase) {
+      word.grammaticalCase = 'nominative';
+    }
+  }
+
   return words;
 }
 
@@ -247,6 +364,7 @@ function identifyWord(
   // Check articles first (before other lookups)
   const artType = ARTICLE_TYPE_MAP[tokenLower];
   if (artType) {
+    const caseInfo = determineCaseFromForm(token);
     return {
       id,
       type: 'article',
@@ -254,17 +372,20 @@ function identifyWord(
       correctForm: token,
       position: 0,
       forms: vocab.articles[artType].forms,
+      grammaticalCase: caseInfo?.case,
     };
   }
 
   // Check pronouns
   if (vocab.pronouns[tokenLower]) {
+    const caseInfo = determineCaseFromForm(token);
     return {
       id,
       type: 'pronoun',
       baseForm: tokenLower,
       correctForm: token,
       position: 0,
+      grammaticalCase: caseInfo?.case,
     };
   }
 
@@ -272,6 +393,7 @@ function identifyWord(
   const possBase = possessiveFormToBase.get(tokenLower);
   if (possBase) {
     const possData = vocab.possessives[possBase];
+    const caseInfo = determineCaseFromForm(token);
     return {
       id,
       type: 'article',  // Use article type so UI shows the dropdown
@@ -279,7 +401,28 @@ function identifyWord(
       correctForm: token,
       position: 0,
       forms: possData.forms,
+      grammaticalCase: caseInfo?.case,
     };
+  }
+
+  // In German, nouns are capitalized. Check for capitalized nouns BEFORE verbs
+  // to avoid confusing "Essen" (food) with "essen" (to eat)
+  const isCapitalized = token[0] === token[0].toUpperCase() && token[0] !== token[0].toLowerCase();
+  if (isCapitalized) {
+    // Check if this capitalized word is a noun
+    const nounBase = nounFormToBase.get(tokenLower);
+    if (nounBase) {
+      const nounData = vocab.nouns[nounBase];
+      return {
+        id,
+        type: 'noun',
+        baseForm: nounBase,
+        correctForm: token,
+        position: 0,
+        gender: nounData.gender,
+        pluralForm: nounData.pluralForm,
+      };
+    }
   }
 
   // Check verbs (including conjugated forms)
@@ -327,27 +470,39 @@ function identifyWord(
   }
 
   // Check adjectives (including declined forms)
+  // Show the correct declined form directly (no dropdown selection needed)
   const adjBase = adjFormToBase.get(tokenLower);
   if (adjBase) {
-    const adjData = vocab.adjectives[adjBase];
     return {
       id,
       type: 'adjective',
-      baseForm: adjBase,
+      baseForm: token,
       correctForm: token,
       position: 0,
-      declensions: adjData.declensions,
     };
   }
 
   // Check prepositions
   if (vocab.prepositions[tokenLower]) {
+    // Common dative prepositions
+    const dativePreps = ['mit', 'nach', 'bei', 'seit', 'von', 'zu', 'aus', 'gegenüber'];
+    // Common accusative prepositions
+    const accusativePreps = ['für', 'gegen', 'durch', 'ohne', 'um', 'bis'];
+
+    let prepCase: Case | undefined;
+    if (dativePreps.includes(tokenLower)) {
+      prepCase = 'dative';
+    } else if (accusativePreps.includes(tokenLower)) {
+      prepCase = 'accusative';
+    }
+
     return {
       id,
       type: 'preposition',
       baseForm: tokenLower,
       correctForm: token,
       position: 0,
+      grammaticalCase: prepCase,
     };
   }
 

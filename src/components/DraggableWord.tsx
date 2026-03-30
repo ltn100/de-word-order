@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import type { MouseEvent } from 'react';
 import { useDraggable } from '@dnd-kit/core';
+import type { DraggableSyntheticListeners } from '@dnd-kit/core';
+import { useSortable } from '@dnd-kit/sortable';
+import { CSS } from '@dnd-kit/utilities';
 import type { WordState, ContextMenuOption } from '../types';
 import { getWordColor } from '../utils/colorUtils';
 import { getConjugationOptions } from '../utils/conjugationUtils';
 import { ContextMenu } from './ContextMenu';
 import './DraggableWord.css';
 
-interface DraggableWordProps {
+interface WordCardProps {
   word: WordState;
   onUpdateForm: (wordId: string, newForm: string) => void;
   onSeparateVerb?: (wordId: string) => void;
@@ -15,10 +18,20 @@ interface DraggableWordProps {
   onSplitContraction?: (wordId: string) => void;
   onWordClick?: (wordId: string) => void;
   disabled?: boolean;
-  style?: React.CSSProperties;
+  showGapBefore?: boolean;
 }
 
-export function DraggableWord({
+interface DragHookResult {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  attributes: any;
+  listeners: DraggableSyntheticListeners;
+  setNodeRef: (node: HTMLElement | null) => void;
+  isDragging: boolean;
+  style: React.CSSProperties;
+}
+
+// Shared rendering logic for word cards
+function WordCardContent({
   word,
   onUpdateForm,
   onSeparateVerb,
@@ -26,17 +39,12 @@ export function DraggableWord({
   onSplitContraction,
   onWordClick,
   disabled = false,
-  style,
-}: DraggableWordProps) {
+  showGapBefore = false,
+  hookResult,
+}: WordCardProps & { hookResult: DragHookResult }) {
   const [contextMenu, setContextMenu] = useState<{ x: number; y: number } | null>(null);
 
-  const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
-    id: word.id,
-    disabled,
-    data: { word },
-  });
-
-  const backgroundColor = getWordColor(word.type, word.gender);
+  const { attributes, listeners, setNodeRef, isDragging, style } = hookResult;
 
   const handleContextMenu = (event: MouseEvent) => {
     event.preventDefault();
@@ -128,20 +136,27 @@ export function DraggableWord({
   // Adjectives no longer have dropdowns
   const hasMenu = menuOptions.length > 0 || isArticle;
 
+  const className = [
+    'draggable-word',
+    isDragging ? 'dragging' : '',
+    hasMenu ? 'has-menu' : '',
+    disabled ? 'disabled' : '',
+    showGapBefore ? 'gap-before' : '',
+  ]
+    .filter(Boolean)
+    .join(' ');
+
   return (
     <>
       <div
         ref={setNodeRef}
-        className={`draggable-word ${isDragging ? 'dragging' : ''} ${hasMenu ? 'has-menu' : ''} ${disabled ? 'disabled' : ''}`}
-        style={{
-          ...style,
-          backgroundColor,
-          opacity: isDragging ? 0.3 : 1,
-        }}
+        className={className}
+        style={style}
+        data-word-id={word.id}
         onContextMenu={handleContextMenu}
         onClick={handleWordClick}
-        {...(disabled ? {} : listeners)}
         {...attributes}
+        {...(disabled ? {} : listeners)}
       >
         <span className="word-text">{word.currentForm}</span>
         {hasMenu && (
@@ -171,5 +186,61 @@ export function DraggableWord({
         />
       )}
     </>
+  );
+}
+
+// Draggable version - for word pool
+export function DraggableWord(props: WordCardProps) {
+  const { word, disabled = false } = props;
+
+  const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
+    id: word.id,
+    disabled,
+    data: { word },
+  });
+
+  const backgroundColor = getWordColor(word.type, word.gender);
+  const style: React.CSSProperties = {
+    backgroundColor,
+    opacity: isDragging ? 0.3 : 1,
+  };
+
+  return (
+    <WordCardContent
+      {...props}
+      hookResult={{ attributes, listeners, setNodeRef, isDragging, style }}
+    />
+  );
+}
+
+// Sortable version - for sentence builder (supports reordering)
+export function SortableWord(props: WordCardProps) {
+  const { word, disabled = false } = props;
+
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    transform,
+    transition,
+    isDragging,
+  } = useSortable({
+    id: word.id,
+    disabled,
+  });
+
+  const backgroundColor = getWordColor(word.type, word.gender);
+  const style: React.CSSProperties = {
+    backgroundColor,
+    opacity: isDragging ? 0.3 : 1,
+    transform: CSS.Transform.toString(transform),
+    transition,
+  };
+
+  return (
+    <WordCardContent
+      {...props}
+      hookResult={{ attributes, listeners, setNodeRef, isDragging, style }}
+    />
   );
 }

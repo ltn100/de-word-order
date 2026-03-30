@@ -1,6 +1,10 @@
 import { useDroppable } from '@dnd-kit/core';
+import {
+  SortableContext,
+  rectSortingStrategy,
+} from '@dnd-kit/sortable';
 import type { WordState } from '../types';
-import { DraggableWord } from './DraggableWord';
+import { SortableWord } from './DraggableWord';
 import './WordPool.css';
 
 interface WordPoolProps {
@@ -33,23 +37,25 @@ export function WordPool({
     >
       <h3 className="pool-title">Available Words</h3>
       <p className="pool-hint">Click or drag words to build your sentence. Click menu to change form.</p>
-      <div className="pool-words">
-        {words.map((word) => (
-          <DraggableWord
-            key={word.id}
-            word={word}
-            onUpdateForm={onUpdateForm}
-            onSeparateVerb={onSeparateVerb}
-            onRejoinVerb={onRejoinVerb}
-            onSplitContraction={onSplitContraction}
-            onWordClick={onWordClick}
-            disabled={disabled}
-          />
-        ))}
-        {words.length === 0 && (
-          <div className="pool-empty">All words placed!</div>
-        )}
-      </div>
+      <SortableContext items={words.map((w) => w.id)} strategy={rectSortingStrategy}>
+        <div className="pool-words">
+          {words.map((word) => (
+            <SortableWord
+              key={word.id}
+              word={word}
+              onUpdateForm={onUpdateForm}
+              onSeparateVerb={onSeparateVerb}
+              onRejoinVerb={onRejoinVerb}
+              onSplitContraction={onSplitContraction}
+              onWordClick={onWordClick}
+              disabled={disabled}
+            />
+          ))}
+          {words.length === 0 && (
+            <div className="pool-empty">All words placed!</div>
+          )}
+        </div>
+      </SortableContext>
     </div>
   );
 }

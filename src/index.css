@@ -43,7 +43,7 @@
   --word-noun-m: #87CEEB;
   --word-noun-f: #FFB6C1;
   --word-noun-n: #98FB98;
-  --word-verb: #DDA0DD;
+  --word-verb: #B19CD9;
   --word-adjective: #FFEB99;
   --word-default: #FFFFFF;
 }
@@ -86,7 +86,7 @@
   --word-noun-m: #4a7a8a;
   --word-noun-f: #8a5a6a;
   --word-noun-n: #5a8a5a;
-  --word-verb: #6a5a8a;
+  --word-verb: #7a6a9a;
   --word-adjective: #8a7a4a;
   --word-default: #3a3a4a;
 }
@@ -130,7 +130,7 @@
     --word-noun-m: #4a7a8a;
     --word-noun-f: #8a5a6a;
     --word-noun-n: #5a8a5a;
-    --word-verb: #6a5a8a;
+    --word-verb: #7a6a9a;
     --word-adjective: #8a7a4a;
     --word-default: #3a3a4a;
   }

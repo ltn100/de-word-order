@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
-import type { WordState, GameState, Level } from '../types';
+import type { WordState, GameState, Level, Sentence } from '../types';
 import { sentenceService } from '../services/SentenceService';
 import { wordToWordState, shuffleArray, compareAnswers, isAllCorrect } from '../utils/wordUtils';
 import { canJoinWords, getContraction } from '../utils/contractionUtils';
@@ -18,6 +18,35 @@ export function useGameState(selectedLevel?: Level) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // Helper to set up game state from a sentence
+  const setupSentence = useCallback((sentence: Sentence) => {
+    // Convert words to word states and shuffle
+    // Filter out prefix placeholder words - they're created when user separates a verb
+    const wordsToShow = sentence.words.filter(word => {
+      // If this word's ID ends with "-prefix", check if there's a separable verb with matching prefix
+      if (word.id.endsWith('-prefix')) {
+        const separableVerb = sentence.words.find(
+          w => w.isSeparable && w.prefix === word.baseForm
+        );
+        if (separableVerb) {
+          return false; // Don't show - will be created when verb is separated
+        }
+      }
+      return true;
+    });
+    const wordStates = wordsToShow.map(wordToWordState);
+    const shuffledWords = shuffleArray(wordStates);
+
+    setGameState({
+      currentSentence: sentence,
+      wordPool: shuffledWords,
+      placedWords: [],
+      isSubmitted: false,
+      isCorrect: null,
+      feedback: [],
+    });
+  }, []);
+
   // Load a new random sentence
   const loadNewSentence = useCallback(async (excludeIds: string[] = []) => {
     setLoading(true);
@@ -32,38 +61,37 @@ export function useGameState(selectedLevel?: Level) {
         return;
       }
 
-      // Convert words to word states and shuffle
-      // Filter out prefix placeholder words - they're created when user separates a verb
-      const wordsToShow = sentence.words.filter(word => {
-        // If this word's ID ends with "-prefix", check if there's a separable verb with matching prefix
-        if (word.id.endsWith('-prefix')) {
-          const separableVerb = sentence.words.find(
-            w => w.isSeparable && w.prefix === word.baseForm
-          );
-          if (separableVerb) {
-            return false; // Don't show - will be created when verb is separated
-          }
-        }
-        return true;
-      });
-      const wordStates = wordsToShow.map(wordToWordState);
-      const shuffledWords = shuffleArray(wordStates);
-
-      setGameState({
-        currentSentence: sentence,
-        wordPool: shuffledWords,
-        placedWords: [],
-        isSubmitted: false,
-        isCorrect: null,
-        feedback: [],
-      });
+      setupSentence(sentence);
     } catch (err) {
       setError('Failed to load sentence');
       console.error(err);
     } finally {
       setLoading(false);
     }
-  }, [selectedLevel]);
+  }, [selectedLevel, setupSentence]);
+
+  // Load a specific sentence by ID
+  const loadSentenceById = useCallback(async (id: string) => {
+    setLoading(true);
+    setError(null);
+
+    try {
+      const sentence = await sentenceService.getSentenceById(id);
+
+      if (!sentence) {
+        setError(`Sentence "${id}" not found`);
+        setLoading(false);
+        return;
+      }
+
+      setupSentence(sentence);
+    } catch (err) {
+      setError('Failed to load sentence');
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  }, [setupSentence]);
 
   // Move word from pool to placed (at end)
   const placeWord = useCallback((wordId: string) => {
@@ -132,6 +160,20 @@ export function useGameState(selectedLevel?: Level) {
       return {
         ...prev,
         placedWords: newPlacedWords,
+      };
+    });
+  }, []);
+
+  // Reorder pool words
+  const reorderPoolWords = useCallback((fromIndex: number, toIndex: number) => {
+    setGameState((prev) => {
+      const newWordPool = [...prev.wordPool];
+      const [moved] = newWordPool.splice(fromIndex, 1);
+      newWordPool.splice(toIndex, 0, moved);
+
+      return {
+        ...prev,
+        wordPool: newWordPool,
       };
     });
   }, []);
@@ -453,6 +495,7 @@ export function useGameState(selectedLevel?: Level) {
     placeWordAtIndex,
     unplaceWord,
     reorderPlacedWords,
+    reorderPoolWords,
     updateWordForm,
     submitAnswer,
     resetCurrentSentence,
@@ -460,5 +503,6 @@ export function useGameState(selectedLevel?: Level) {
     rejoinVerb,
     joinWords,
     splitContraction,
+    loadSentenceById,
   };
 }

@@ -79,9 +79,9 @@
 }
 
 .feedback-word {
-  padding: 8px 14px;
-  border-radius: 6px;
-  font-size: 16px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 18px;
   font-weight: 500;
   border: 2px solid transparent;
   color: var(--word-text);
@@ -93,6 +93,74 @@
   position: relative;
 }
 
+.feedback-word.right {
+  border-bottom: 3px solid var(--success-border);
+  position: relative;
+}
+
 .feedback-word.correct-word {
   border: 2px solid rgba(40, 167, 69, 0.5);
+  border-bottom-width: 3px; /* Match the height of right/wrong underlines */
+}
+
+/* Case group wrapper - contains words + underline + label */
+.case-group-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.case-group-words {
+  display: flex;
+  gap: 8px;
+}
+
+.case-group-underline {
+  width: 100%;
+  height: 3px;
+  background-color: var(--case-color);
+  border-radius: 2px;
+  margin-top: 6px;
+}
+
+.case-group-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--case-color);
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+
+/* Adjust correct answer words container for case groups */
+.correct-answer-words {
+  align-items: flex-start;
+}
+
+/* Case legend */
+.case-legend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-color);
+  font-size: 13px;
+}
+
+.case-legend-title {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.case-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.case-legend-marker {
+  width: 16px;
+  height: 3px;
+  border-radius: 1px;
 }

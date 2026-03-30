@@ -42,6 +42,7 @@ export function GameBoard({ totalSentences }: GameBoardProps) {
     placeWordAtIndex,
     unplaceWord,
     reorderPlacedWords,
+    reorderPoolWords,
     updateWordForm,
     submitAnswer,
     resetCurrentSentence,
@@ -49,6 +50,7 @@ export function GameBoard({ totalSentences }: GameBoardProps) {
     rejoinVerb,
     joinWords,
     splitContraction,
+    loadSentenceById,
   } = useGameState(selectedLevel);
 
   const { progress, recordSubmission } = useProgress();
@@ -160,6 +162,16 @@ export function GameBoard({ totalSentences }: GameBoardProps) {
         reorderPlacedWords(oldIndex, newIndex);
       }
     }
+
+    // Handle reordering within word pool
+    if (isFromPool && !isToSentenceBuilder) {
+      const oldIndex = gameState.wordPool.findIndex((w) => w.id === activeId);
+      const newIndex = gameState.wordPool.findIndex((w) => w.id === overId);
+
+      if (oldIndex !== -1 && newIndex !== -1 && oldIndex !== newIndex) {
+        reorderPoolWords(oldIndex, newIndex);
+      }
+    }
   };
 
   const handleSubmit = () => {
@@ -195,6 +207,13 @@ export function GameBoard({ totalSentences }: GameBoardProps) {
 
   const handleTryAgain = () => {
     resetCurrentSentence();
+  };
+
+  const handleSentenceIdClick = () => {
+    const id = prompt('Enter sentence ID:', gameState.currentSentence?.id || '');
+    if (id && id.trim()) {
+      loadSentenceById(id.trim());
+    }
   };
 
   if (loading) {
@@ -306,6 +325,16 @@ export function GameBoard({ totalSentences }: GameBoardProps) {
           correctWords={gameState.currentSentence.words}
         />
       )}
+
+      <footer className="game-footer">
+        <span
+          className="sentence-id"
+          onClick={handleSentenceIdClick}
+          title="Click to load a specific sentence"
+        >
+          {gameState.currentSentence.id}
+        </span>
+      </footer>
     </div>
   );
 }
