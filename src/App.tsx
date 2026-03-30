@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { GameBoard } from './components/GameBoard';
 import { ColorLegend } from './components/ColorLegend';
 import { ThemeToggle } from './components/ThemeToggle';
+import { QRCode } from './components/QRCode';
 import { sentenceService } from './services/SentenceService';
 import { useTheme } from './hooks/useTheme';
 import './App.css';
@@ -34,6 +35,7 @@ function App() {
       </main>
 
       <ColorLegend />
+      <QRCode />
     </div>
   );
 }

@@ -1,0 +1,92 @@
+.share-button {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow-color);
+  color: var(--text-muted);
+  font-size: 14px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.share-button:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.qr-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+.qr-modal {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 8px 32px var(--shadow-color);
+  text-align: center;
+  animation: scaleIn 0.2s ease;
+}
+
+.qr-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+}
+
+.qr-close:hover {
+  background: var(--bg-secondary);
+}
+
+.qr-modal h3 {
+  margin: 0 0 8px 0;
+  color: var(--text-primary);
+  font-size: 20px;
+}
+
+.qr-modal p {
+  margin: 0 0 24px 0;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.qr-code-wrapper {
+  padding: 16px;
+  background: var(--bg-card);
+  border-radius: 12px;
+  display: inline-block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
