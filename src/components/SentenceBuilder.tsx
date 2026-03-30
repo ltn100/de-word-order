@@ -10,7 +10,7 @@ import { CSS } from '@dnd-kit/utilities';
 import type { WordState, ContextMenuOption } from '../types';
 import { getWordColor } from '../utils/colorUtils';
 import { ContextMenu } from './ContextMenu';
-import { getConjugationOptions, getArticleMatrix, getAdjectiveMatrix } from '../utils/conjugationUtils';
+import { getConjugationOptions } from '../utils/conjugationUtils';
 import { canJoinAdjacent } from '../utils/contractionUtils';
 import './SentenceBuilder.css';
 
@@ -139,9 +139,8 @@ function SortableWord({
 
   const menuOptions = getContextMenuOptions();
   const isArticle = word.type === 'article' && word.forms;
-  const isAdjective = word.type === 'adjective' && word.declensions;
-  const hasMatrix = isArticle || isAdjective;
-  const hasMenu = menuOptions.length > 0 || hasMatrix;
+  // Adjectives no longer have dropdowns
+  const hasMenu = menuOptions.length > 0 || isArticle;
 
   return (
     <>
@@ -175,12 +174,9 @@ function SortableWord({
           y={contextMenu.y}
           options={menuOptions}
           onClose={() => setContextMenu(null)}
-          articleMatrix={hasMatrix ? {
-            matrix: isArticle
-              ? getArticleMatrix(word.forms!)
-              : getAdjectiveMatrix(word.declensions!, word.baseForm).matrix,
+          simpleList={isArticle ? {
+            forms: [...new Set(word.forms!)],
             onSelect: (value) => onUpdateForm(word.id, value),
-            baseForm: isAdjective ? word.baseForm : undefined,
           } : undefined}
           readOnly={disabled}
         />

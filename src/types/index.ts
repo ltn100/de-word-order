@@ -19,7 +19,7 @@ export type Person = 'ich' | 'du' | 'er' | 'wir' | 'ihr' | 'sie';
 export type Case = 'nominative' | 'accusative' | 'dative' | 'genitive';
 
 // CEFR Levels
-export type Level = 'A1.1' | 'A1.2' | 'A1.3' | 'A2.1' | 'A2.2' | 'A2.3';
+export type Level = 'A1.1' | 'A1.2' | 'A1.3';
 
 // Conjugation table for verbs
 export type Conjugations = Record<Person, string>;
@@ -47,6 +47,7 @@ export interface Word {
   isSeparable?: boolean;
   prefix?: string;        // e.g., "auf" for "aufstehen"
   stem?: string;          // e.g., "stehen" for "aufstehen"
+  prefixPosition?: number; // Position of prefix in sentence (for separated verbs)
 
   // For articles
   forms?: string[];       // All possible forms (all genders and cases)

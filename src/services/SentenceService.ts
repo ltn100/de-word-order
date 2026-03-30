@@ -2,9 +2,6 @@ import type { Sentence, Level } from '../types';
 import sentencesA1_1 from '../data/sentences_A1_1.json';
 import sentencesA1_2 from '../data/sentences_A1_2.json';
 import sentencesA1_3 from '../data/sentences_A1_3.json';
-import sentencesA2_1 from '../data/sentences_A2_1.json';
-import sentencesA2_2 from '../data/sentences_A2_2.json';
-import sentencesA2_3 from '../data/sentences_A2_3.json';
 import { parseSentence } from '../utils/sentenceParser';
 
 // Combine all sentence data
@@ -12,9 +9,6 @@ const sentencesData = [
   ...sentencesA1_1,
   ...sentencesA1_2,
   ...sentencesA1_3,
-  ...sentencesA2_1,
-  ...sentencesA2_2,
-  ...sentencesA2_3,
 ];
 
 // Simple sentence format - just the essentials

@@ -9,16 +9,22 @@ interface ArticleMatrixProps {
   baseForm?: string;  // For predicate adjectives (after sein/werden)
 }
 
+interface SimpleListProps {
+  forms: string[];
+  onSelect: (value: string) => void;
+}
+
 interface ContextMenuProps {
   x: number;
   y: number;
   options: ContextMenuOption[];
   onClose: () => void;
   articleMatrix?: ArticleMatrixProps;
+  simpleList?: SimpleListProps;
   readOnly?: boolean;
 }
 
-export function ContextMenu({ x, y, options, onClose, articleMatrix, readOnly = false }: ContextMenuProps) {
+export function ContextMenu({ x, y, options, onClose, articleMatrix, simpleList, readOnly = false }: ContextMenuProps) {
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -71,6 +77,13 @@ export function ContextMenu({ x, y, options, onClose, articleMatrix, readOnly = 
     }
   };
 
+  const handleSimpleListSelect = (value: string) => {
+    if (simpleList) {
+      simpleList.onSelect(value);
+      onClose();
+    }
+  };
+
   const genders: Array<'m' | 'f' | 'n'> = ['m', 'f', 'n'];
 
   return (
@@ -79,7 +92,20 @@ export function ContextMenu({ x, y, options, onClose, articleMatrix, readOnly = 
       className={`context-menu ${readOnly ? 'read-only' : ''}`}
       style={{ left: x, top: y }}
     >
-      {articleMatrix ? (
+      {simpleList ? (
+        <div className="simple-list">
+          {simpleList.forms.map((form, index) => (
+            <button
+              key={`form-${index}`}
+              className="context-menu-item"
+              onClick={() => !readOnly && handleSimpleListSelect(form)}
+              disabled={readOnly}
+            >
+              {form}
+            </button>
+          ))}
+        </div>
+      ) : articleMatrix ? (
         <div className="article-matrix">
           {articleMatrix.baseForm && (
             <div className="article-matrix-row base-form-row">

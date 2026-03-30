@@ -154,14 +154,21 @@ export function parseSentence(sentence: CompactSentence): Word[] {
   const contractionSet = new Set(hints.contractions?.map(c => c.toLowerCase()) || []);
   const separableVerbs = hints.separable || [];
 
-  // Find which prefixes belong to separable verbs
+  // Build maps for separable verb handling
   const separablePrefixes = new Set<string>();
+  const stemToSeparable = new Map<string, string>(); // e.g., "fahren" -> "abfahren"
+  const prefixToSeparable = new Map<string, string>(); // e.g., "auf" -> "aufräumen"
   for (const verbBase of separableVerbs) {
     const verbData = vocab.verbs[verbBase];
-    if (verbData?.prefix) {
+    if (verbData?.prefix && verbData?.stem) {
       separablePrefixes.add(verbData.prefix.toLowerCase());
+      stemToSeparable.set(verbData.stem.toLowerCase(), verbBase);
+      prefixToSeparable.set(verbData.prefix.toLowerCase(), verbBase);
     }
   }
+
+  // Track prefix positions (prefix -> position in sentence)
+  const prefixPositions = new Map<string, number>();
 
   let position = 0;
 
@@ -188,7 +195,7 @@ export function parseSentence(sentence: CompactSentence): Word[] {
       words.push({
         id: `${sentence.id}-w${words.length + 1}`,
         type: 'article',
-        baseForm: vocab.articles[artType].baseForm,
+        baseForm: artForm,
         correctForm: artForm,
         position: -1,
         forms: vocab.articles[artType].forms,
@@ -197,23 +204,30 @@ export function parseSentence(sentence: CompactSentence): Word[] {
       continue;
     }
 
-    // Check if this is a separable verb prefix at end of sentence
+    // Track separable verb prefix positions but don't create separate words
     if (separablePrefixes.has(tokenLower)) {
-      words.push({
-        id: `${sentence.id}-w${words.length + 1}-prefix`,
-        type: 'verb',
-        baseForm: tokenLower,
-        correctForm: token,
-        position: position++,
-      });
+      const separableBase = prefixToSeparable.get(tokenLower);
+      if (separableBase) {
+        prefixPositions.set(separableBase, position++);
+      }
       continue;
     }
 
     // Try to identify the word type
-    const word = identifyWord(token, tokenLower, isFirstWord, sentence.id, words.length, separableVerbs);
+    const word = identifyWord(token, tokenLower, isFirstWord, sentence.id, words.length, stemToSeparable);
     if (word) {
       word.position = position++;
       words.push(word);
+    }
+  }
+
+  // Set prefix positions on separable verbs
+  for (const word of words) {
+    if (word.isSeparable && word.baseForm) {
+      const prefixPos = prefixPositions.get(word.baseForm);
+      if (prefixPos !== undefined) {
+        word.prefixPosition = prefixPos;
+      }
     }
   }
 
@@ -226,7 +240,7 @@ function identifyWord(
   _isFirstWord: boolean,
   sentenceId: string,
   wordIndex: number,
-  separableVerbs: string[]
+  stemToSeparable: Map<string, string>
 ): Word | null {
   const id = `${sentenceId}-w${wordIndex + 1}`;
 
@@ -269,17 +283,25 @@ function identifyWord(
   }
 
   // Check verbs (including conjugated forms)
-  const verbBase = verbFormToBase.get(tokenLower);
+  let verbBase = verbFormToBase.get(tokenLower);
   if (verbBase) {
-    const verbData = vocab.verbs[verbBase];
+    // Check if this stem maps to a separable verb (e.g., "fahren" -> "abfahren")
+    const separableBase = stemToSeparable.get(verbBase.toLowerCase());
+    if (separableBase) {
+      verbBase = separableBase;
+    }
 
-    // Check if this is a separable verb
-    const isSeparableVerb = separableVerbs.includes(verbBase);
+    const verbData = vocab.verbs[verbBase];
+    const isSeparableVerb = verbData?.isSeparable || false;
+
+    // For past tense verbs (keyed as "haben-past"), use the actual form for display
+    const isPastTense = verbBase.endsWith('-past');
+    const displayBase = isPastTense ? token : verbBase;
 
     return {
       id,
       type: 'verb',
-      baseForm: verbBase,
+      baseForm: displayBase,
       correctForm: token,
       position: 0,
       conjugations: verbData.conjugations as any,

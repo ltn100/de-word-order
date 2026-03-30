@@ -24,10 +24,14 @@ interface GameBoardProps {
   totalSentences: number;
 }
 
-const LEVELS: Level[] = ['A1.1', 'A1.2', 'A1.3', 'A2.1', 'A2.2', 'A2.3'];
+const LEVELS: Level[] = ['A1.1', 'A1.2', 'A1.3'];
+const LEVEL_STORAGE_KEY = 'german-app-selected-level';
 
 export function GameBoard({ totalSentences }: GameBoardProps) {
-  const [selectedLevel, setSelectedLevel] = useState<Level | undefined>(undefined);
+  const [selectedLevel, setSelectedLevel] = useState<Level | undefined>(() => {
+    const saved = localStorage.getItem(LEVEL_STORAGE_KEY);
+    return saved && LEVELS.includes(saved as Level) ? (saved as Level) : undefined;
+  });
 
   const {
     gameState,
@@ -176,7 +180,13 @@ export function GameBoard({ totalSentences }: GameBoardProps) {
 
   const handleLevelChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const value = e.target.value;
-    setSelectedLevel(value === '' ? undefined : value as Level);
+    const newLevel = value === '' ? undefined : value as Level;
+    setSelectedLevel(newLevel);
+    if (newLevel) {
+      localStorage.setItem(LEVEL_STORAGE_KEY, newLevel);
+    } else {
+      localStorage.removeItem(LEVEL_STORAGE_KEY);
+    }
   };
 
   const handleNextSentence = () => {

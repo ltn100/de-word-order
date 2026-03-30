@@ -66,6 +66,11 @@
   margin: 6px 0;
 }
 
+/* Simple list layout for articles */
+.simple-list {
+  padding: 4px 0;
+}
+
 /* Article matrix layout */
 .article-matrix {
   display: flex;

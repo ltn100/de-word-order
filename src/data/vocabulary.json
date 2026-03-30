@@ -2,7 +2,7 @@
   "verbs": {
     "sein": {
       "type": "verb",
-      "conjugations": { "ich": "bin", "du": "bist", "er": "ist", "wir": "sind", "ihr": "seid", "sie": "sind" }
+      "conjugations": { "ich": "bin", "du": "bist", "er": "ist", "wir": "sind", "ihr": "seid", "sie": "sind", "du-imp": "sei" }
     },
     "haben": {
       "type": "verb",
@@ -10,11 +10,11 @@
     },
     "gehen": {
       "type": "verb",
-      "conjugations": { "ich": "gehe", "du": "gehst", "er": "geht", "wir": "gehen", "ihr": "geht", "sie": "gehen" }
+      "conjugations": { "ich": "gehe", "du": "gehst", "er": "geht", "wir": "gehen", "ihr": "geht", "sie": "gehen", "du-imp": "geh" }
     },
     "kommen": {
       "type": "verb",
-      "conjugations": { "ich": "komme", "du": "kommst", "er": "kommt", "wir": "kommen", "ihr": "kommt", "sie": "kommen" }
+      "conjugations": { "ich": "komme", "du": "kommst", "er": "kommt", "wir": "kommen", "ihr": "kommt", "sie": "kommen", "du-imp": "komm" }
     },
     "machen": {
       "type": "verb",
@@ -38,7 +38,7 @@
     },
     "trinken": {
       "type": "verb",
-      "conjugations": { "ich": "trinke", "du": "trinkst", "er": "trinkt", "wir": "trinken", "ihr": "trinkt", "sie": "trinken" }
+      "conjugations": { "ich": "trinke", "du": "trinkst", "er": "trinkt", "wir": "trinken", "ihr": "trinkt", "sie": "trinken", "du-imp": "trink" }
     },
     "essen": {
       "type": "verb",
@@ -46,7 +46,7 @@
     },
     "lesen": {
       "type": "verb",
-      "conjugations": { "ich": "lese", "du": "liest", "er": "liest", "wir": "lesen", "ihr": "lest", "sie": "lesen" }
+      "conjugations": { "ich": "lese", "du": "liest", "er": "liest", "wir": "lesen", "ihr": "lest", "sie": "lesen", "du-imp": "lies" }
     },
     "schreiben": {
       "type": "verb",
@@ -70,7 +70,7 @@
     },
     "warten": {
       "type": "verb",
-      "conjugations": { "ich": "warte", "du": "wartest", "er": "wartet", "wir": "warten", "ihr": "wartet", "sie": "warten" }
+      "conjugations": { "ich": "warte", "du": "wartest", "er": "wartet", "wir": "warten", "ihr": "wartet", "sie": "warten", "du-imp": "warte" }
     },
     "kaufen": {
       "type": "verb",
@@ -126,7 +126,7 @@
     },
     "nehmen": {
       "type": "verb",
-      "conjugations": { "ich": "nehme", "du": "nimmst", "er": "nimmt", "wir": "nehmen", "ihr": "nehmt", "sie": "nehmen" }
+      "conjugations": { "ich": "nehme", "du": "nimmst", "er": "nimmt", "wir": "nehmen", "ihr": "nehmt", "sie": "nehmen", "du-imp": "nimm" }
     },
     "bringen": {
       "type": "verb",
@@ -146,7 +146,7 @@
     },
     "bleiben": {
       "type": "verb",
-      "conjugations": { "ich": "bleibe", "du": "bleibst", "er": "bleibt", "wir": "bleiben", "ihr": "bleibt", "sie": "bleiben" }
+      "conjugations": { "ich": "bleibe", "du": "bleibst", "er": "bleibt", "wir": "bleiben", "ihr": "bleibt", "sie": "bleiben", "du-imp": "bleib" }
     },
     "verstehen": {
       "type": "verb",
@@ -178,7 +178,7 @@
     },
     "öffnen": {
       "type": "verb",
-      "conjugations": { "ich": "öffne", "du": "öffnest", "er": "öffnet", "wir": "öffnen", "ihr": "öffnet", "sie": "öffnen" }
+      "conjugations": { "ich": "öffne", "du": "öffnest", "er": "öffnet", "wir": "öffnen", "ihr": "öffnet", "sie": "öffnen", "du-imp": "öffne" }
     },
     "schließen": {
       "type": "verb",
@@ -240,7 +240,7 @@
       "isSeparable": true,
       "prefix": "an",
       "stem": "rufen",
-      "conjugations": { "ich": "rufe", "du": "rufst", "er": "ruft", "wir": "rufen", "ihr": "ruft", "sie": "rufen" }
+      "conjugations": { "ich": "rufe", "du": "rufst", "er": "ruft", "wir": "rufen", "ihr": "ruft", "sie": "rufen", "du-imp": "ruf" }
     },
     "abfahren": {
       "type": "verb",
@@ -435,6 +435,97 @@
       "type": "verb",
       "conjugations": { "ich": "reise", "du": "reist", "er": "reist", "wir": "reisen", "ihr": "reist", "sie": "reisen" }
     },
+    "heißen": {
+      "type": "verb",
+      "conjugations": { "ich": "heiße", "du": "heißt", "er": "heißt", "wir": "heißen", "ihr": "heißt", "sie": "heißen" }
+    },
+    "passen": {
+      "type": "verb",
+      "conjugations": { "ich": "passe", "du": "passt", "er": "passt", "wir": "passen", "ihr": "passt", "sie": "passen" }
+    },
+    "gefallen": {
+      "type": "verb",
+      "conjugations": { "ich": "gefalle", "du": "gefällst", "er": "gefällt", "wir": "gefallen", "ihr": "gefallt", "sie": "gefallen" }
+    },
+    "packen": {
+      "type": "verb",
+      "conjugations": { "ich": "packe", "du": "packst", "er": "packt", "wir": "packen", "ihr": "packt", "sie": "packen" }
+    },
+    "hängen": {
+      "type": "verb",
+      "conjugations": { "ich": "hänge", "du": "hängst", "er": "hängt", "wir": "hängen", "ihr": "hängt", "sie": "hängen" }
+    },
+    "studieren": {
+      "type": "verb",
+      "conjugations": { "ich": "studiere", "du": "studierst", "er": "studiert", "wir": "studieren", "ihr": "studiert", "sie": "studieren" }
+    },
+    "reden": {
+      "type": "verb",
+      "conjugations": { "ich": "rede", "du": "redest", "er": "redet", "wir": "reden", "ihr": "redet", "sie": "reden" }
+    },
+    "rauchen": {
+      "type": "verb",
+      "conjugations": { "ich": "rauche", "du": "rauchst", "er": "raucht", "wir": "rauchen", "ihr": "raucht", "sie": "rauchen" }
+    },
+    "kostet": {
+      "type": "verb",
+      "conjugations": { "ich": "koste", "du": "kostest", "er": "kostet", "wir": "kosten", "ihr": "kostet", "sie": "kosten" }
+    },
+    "abbiegen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "ab",
+      "stem": "biegen",
+      "conjugations": { "ich": "biege", "du": "biegst", "er": "biegt", "wir": "biegen", "ihr": "biegt", "sie": "biegen" }
+    },
+    "anprobieren": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "an",
+      "stem": "probieren",
+      "conjugations": { "ich": "probiere", "du": "probierst", "er": "probiert", "wir": "probieren", "ihr": "probiert", "sie": "probieren" }
+    },
+    "ausruhen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "aus",
+      "stem": "ruhen",
+      "conjugations": { "ich": "ruhe", "du": "ruhst", "er": "ruht", "wir": "ruhen", "ihr": "ruht", "sie": "ruhen" }
+    },
+    "verdienen": {
+      "type": "verb",
+      "conjugations": { "ich": "verdiene", "du": "verdienst", "er": "verdient", "wir": "verdienen", "ihr": "verdient", "sie": "verdienen" }
+    },
+    "blühen": {
+      "type": "verb",
+      "conjugations": { "ich": "blühe", "du": "blühst", "er": "blüht", "wir": "blühen", "ihr": "blüht", "sie": "blühen" }
+    },
+    "schmecken": {
+      "type": "verb",
+      "conjugations": { "ich": "schmecke", "du": "schmeckst", "er": "schmeckt", "wir": "schmecken", "ihr": "schmeckt", "sie": "schmecken" }
+    },
+    "parken": {
+      "type": "verb",
+      "conjugations": { "ich": "parke", "du": "parkst", "er": "parkt", "wir": "parken", "ihr": "parkt", "sie": "parken" }
+    },
+    "aufpassen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "auf",
+      "stem": "passen",
+      "conjugations": { "ich": "passe", "du": "passt", "er": "passt", "wir": "passen", "ihr": "passt", "sie": "passen" }
+    },
+    "mitbringen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "mit",
+      "stem": "bringen",
+      "conjugations": { "ich": "bringe", "du": "bringst", "er": "bringt", "wir": "bringen", "ihr": "bringt", "sie": "bringen" }
+    },
+    "genießen": {
+      "type": "verb",
+      "conjugations": { "ich": "genieße", "du": "genießt", "er": "genießt", "wir": "genießen", "ihr": "genießt", "sie": "genießen" }
+    },
     "mögen": {
       "type": "verb",
       "conjugations": { "ich": "mag", "du": "magst", "er": "mag", "wir": "mögen", "ihr": "mögt", "sie": "mögen" }
@@ -454,6 +545,40 @@
     "arbeiten-past": {
       "type": "verb",
       "conjugations": { "ich": "arbeitete", "du": "arbeitetest", "er": "arbeitete", "wir": "arbeiteten", "ihr": "arbeitetet", "sie": "arbeiteten" }
+    },
+    "legen": {
+      "type": "verb",
+      "conjugations": { "ich": "lege", "du": "legst", "er": "legt", "wir": "legen", "ihr": "legt", "sie": "legen" }
+    },
+    "setzen": {
+      "type": "verb",
+      "conjugations": { "ich": "setze", "du": "setzt", "er": "setzt", "wir": "setzen", "ihr": "setzt", "sie": "setzen" }
+    },
+    "fehlen": {
+      "type": "verb",
+      "conjugations": { "ich": "fehle", "du": "fehlst", "er": "fehlt", "wir": "fehlen", "ihr": "fehlt", "sie": "fehlen" }
+    },
+    "umziehen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "um",
+      "stem": "ziehen",
+      "conjugations": { "ich": "ziehe", "du": "ziehst", "er": "zieht", "wir": "ziehen", "ihr": "zieht", "sie": "ziehen" }
+    },
+    "buchen": {
+      "type": "verb",
+      "conjugations": { "ich": "buche", "du": "buchst", "er": "bucht", "wir": "buchen", "ihr": "bucht", "sie": "buchen" }
+    },
+    "einschlafen": {
+      "type": "verb",
+      "isSeparable": true,
+      "prefix": "ein",
+      "stem": "schlafen",
+      "conjugations": { "ich": "schlafe", "du": "schläfst", "er": "schläft", "wir": "schlafen", "ihr": "schlaft", "sie": "schlafen" }
+    },
+    "werden": {
+      "type": "verb",
+      "conjugations": { "ich": "werde", "du": "wirst", "er": "wird", "wir": "werden", "ihr": "werdet", "sie": "werden" }
     }
   },
   "nouns": {
@@ -616,7 +741,120 @@
     "Hauptstraße": { "type": "noun", "gender": "f", "pluralForm": "Hauptstraßen" },
     "Stadtzentrum": { "type": "noun", "gender": "n", "pluralForm": "Stadtzentren" },
     "Essen": { "type": "noun", "gender": "n" },
-    "Bett": { "type": "noun", "gender": "n", "pluralForm": "Betten" }
+    "Bett": { "type": "noun", "gender": "n", "pluralForm": "Betten" },
+    "Rathaus": { "type": "noun", "gender": "n", "pluralForm": "Rathäuser" },
+    "Apotheke": { "type": "noun", "gender": "f", "pluralForm": "Apotheken" },
+    "U-Bahn": { "type": "noun", "gender": "f", "pluralForm": "U-Bahnen" },
+    "Brötchen": { "type": "noun", "gender": "n", "pluralForm": "Brötchen" },
+    "Tomate": { "type": "noun", "gender": "f", "pluralForm": "Tomaten" },
+    "Euro": { "type": "noun", "gender": "m", "pluralForm": "Euro" },
+    "Krankenschwester": { "type": "noun", "gender": "f", "pluralForm": "Krankenschwestern" },
+    "Kopf": { "type": "noun", "gender": "m", "pluralForm": "Köpfe" },
+    "Rücken": { "type": "noun", "gender": "m", "pluralForm": "Rücken" },
+    "Bauch": { "type": "noun", "gender": "m", "pluralForm": "Bäuche" },
+    "Medizin": { "type": "noun", "gender": "f" },
+    "Erkältung": { "type": "noun", "gender": "f", "pluralForm": "Erkältungen" },
+    "Besprechung": { "type": "noun", "gender": "f", "pluralForm": "Besprechungen" },
+    "E-Mail": { "type": "noun", "gender": "f", "pluralForm": "E-Mails" },
+    "Schlafzimmer": { "type": "noun", "gender": "n", "pluralForm": "Schlafzimmer" },
+    "Wohnzimmer": { "type": "noun", "gender": "n", "pluralForm": "Wohnzimmer" },
+    "Sofa": { "type": "noun", "gender": "n", "pluralForm": "Sofas" },
+    "Wand": { "type": "noun", "gender": "f", "pluralForm": "Wände" },
+    "Bild": { "type": "noun", "gender": "n", "pluralForm": "Bilder" },
+    "Regal": { "type": "noun", "gender": "n", "pluralForm": "Regale" },
+    "Lampe": { "type": "noun", "gender": "f", "pluralForm": "Lampen" },
+    "Balkon": { "type": "noun", "gender": "m", "pluralForm": "Balkone" },
+    "Miete": { "type": "noun", "gender": "f", "pluralForm": "Mieten" },
+    "Vorhang": { "type": "noun", "gender": "m", "pluralForm": "Vorhänge" },
+    "Hemd": { "type": "noun", "gender": "n", "pluralForm": "Hemden" },
+    "Hose": { "type": "noun", "gender": "f", "pluralForm": "Hosen" },
+    "Kleid": { "type": "noun", "gender": "n", "pluralForm": "Kleider" },
+    "Pullover": { "type": "noun", "gender": "m", "pluralForm": "Pullover" },
+    "Schuh": { "type": "noun", "gender": "m", "pluralForm": "Schuhe" },
+    "Farbe": { "type": "noun", "gender": "f", "pluralForm": "Farben" },
+    "Größe": { "type": "noun", "gender": "f", "pluralForm": "Größen" },
+    "Reise": { "type": "noun", "gender": "f", "pluralForm": "Reisen" },
+    "Postkarte": { "type": "noun", "gender": "f", "pluralForm": "Postkarten" },
+    "Meer": { "type": "noun", "gender": "n", "pluralForm": "Meere" },
+    "Koffer": { "type": "noun", "gender": "m", "pluralForm": "Koffer" },
+    "Flug": { "type": "noun", "gender": "m", "pluralForm": "Flüge" },
+    "Gleis": { "type": "noun", "gender": "n", "pluralForm": "Gleise" },
+    "Italien": { "type": "noun", "gender": "n" },
+    "Spanien": { "type": "noun", "gender": "n" },
+    "Telefonnummer": { "type": "noun", "gender": "f", "pluralForm": "Telefonnummern" },
+    "Einladung": { "type": "noun", "gender": "f", "pluralForm": "Einladungen" },
+    "Weihnachten": { "type": "noun", "gender": "n" },
+    "Schreibtisch": { "type": "noun", "gender": "m", "pluralForm": "Schreibtische" },
+    "Bauchschmerzen": { "type": "noun", "gender": "m" },
+    "Bäcker": { "type": "noun", "gender": "m", "pluralForm": "Bäcker" },
+    "Speisekarte": { "type": "noun", "gender": "f", "pluralForm": "Speisekarten" },
+    "Flasche": { "type": "noun", "gender": "f", "pluralForm": "Flaschen" },
+    "Stück": { "type": "noun", "gender": "n", "pluralForm": "Stücke" },
+    "Vegetarier": { "type": "noun", "gender": "m", "pluralForm": "Vegetarier" },
+    "Zahnarzt": { "type": "noun", "gender": "m", "pluralForm": "Zahnärzte" },
+    "Bibliothek": { "type": "noun", "gender": "f", "pluralForm": "Bibliotheken" },
+    "Stadtbibliothek": { "type": "noun", "gender": "f", "pluralForm": "Stadtbibliotheken" },
+    "Konferenzraum": { "type": "noun", "gender": "m", "pluralForm": "Konferenzräume" },
+    "Schmerzen": { "type": "noun", "gender": "m" },
+    "Tablette": { "type": "noun", "gender": "f", "pluralForm": "Tabletten" },
+    "Nachfrage": { "type": "noun", "gender": "f" },
+    "Untersuchung": { "type": "noun", "gender": "f", "pluralForm": "Untersuchungen" },
+    "Bücherregal": { "type": "noun", "gender": "n", "pluralForm": "Bücherregale" },
+    "Nachttisch": { "type": "noun", "gender": "m", "pluralForm": "Nachttische" },
+    "Blick": { "type": "noun", "gender": "m", "pluralForm": "Blicke" },
+    "Lage": { "type": "noun", "gender": "f", "pluralForm": "Lagen" },
+    "Sprachschule": { "type": "noun", "gender": "f", "pluralForm": "Sprachschulen" },
+    "Altstadt": { "type": "noun", "gender": "f", "pluralForm": "Altstädte" },
+    "Zentrum": { "type": "noun", "gender": "n", "pluralForm": "Zentren" },
+    "Projekt": { "type": "noun", "gender": "n", "pluralForm": "Projekte" },
+    "Umkleidekabine": { "type": "noun", "gender": "f", "pluralForm": "Umkleidekabinen" },
+    "Aussicht": { "type": "noun", "gender": "f", "pluralForm": "Aussichten" },
+    "Konferenz": { "type": "noun", "gender": "f", "pluralForm": "Konferenzen" },
+    "Taxi": { "type": "noun", "gender": "n", "pluralForm": "Taxis" },
+    "Schlüssel": { "type": "noun", "gender": "m", "pluralForm": "Schlüssel" },
+    "Schublade": { "type": "noun", "gender": "f", "pluralForm": "Schubladen" },
+    "Frühling": { "type": "noun", "gender": "m" },
+    "Appetit": { "type": "noun", "gender": "m" },
+    "Österreich": { "type": "noun", "gender": "n" },
+    "Frankreich": { "type": "noun", "gender": "n" },
+    "Schweiz": { "type": "noun", "gender": "f" },
+    "Französisch": { "type": "noun", "gender": "n" },
+    "Ingenieur": { "type": "noun", "gender": "m", "pluralForm": "Ingenieure" },
+    "Studentin": { "type": "noun", "gender": "f", "pluralForm": "Studentinnen" },
+    "Ecke": { "type": "noun", "gender": "f", "pluralForm": "Ecken" },
+    "Rechnung": { "type": "noun", "gender": "f", "pluralForm": "Rechnungen" },
+    "Text": { "type": "noun", "gender": "m", "pluralForm": "Texte" },
+    "Moment": { "type": "noun", "gender": "m", "pluralForm": "Momente" },
+    "Spaß": { "type": "noun", "gender": "m" },
+    "Sonntag": { "type": "noun", "gender": "m", "pluralForm": "Sonntage" },
+    "Montag": { "type": "noun", "gender": "m", "pluralForm": "Montage" },
+    "Dienstag": { "type": "noun", "gender": "m", "pluralForm": "Dienstage" },
+    "Vase": { "type": "noun", "gender": "f", "pluralForm": "Vasen" },
+    "Schrank": { "type": "noun", "gender": "m", "pluralForm": "Schränke" },
+    "Mantel": { "type": "noun", "gender": "m", "pluralForm": "Mäntel" },
+    "Stiefel": { "type": "noun", "gender": "m", "pluralForm": "Stiefel" },
+    "Rock": { "type": "noun", "gender": "m", "pluralForm": "Röcke" },
+    "Foto": { "type": "noun", "gender": "n", "pluralForm": "Fotos" },
+    "Nähe": { "type": "noun", "gender": "f" },
+    "Viertel": { "type": "noun", "gender": "n", "pluralForm": "Viertel" },
+    "Mai": { "type": "noun", "gender": "m" },
+    "Oktober": { "type": "noun", "gender": "m" },
+    "Abendessen": { "type": "noun", "gender": "n" },
+    "Großeltern": { "type": "noun", "gender": "m" },
+    "Entschuldigung": { "type": "noun", "gender": "f", "pluralForm": "Entschuldigungen" },
+    "Besserung": { "type": "noun", "gender": "f" },
+    "Bank": { "type": "noun", "gender": "f", "pluralForm": "Banken" },
+    "Bahn": { "type": "noun", "gender": "f", "pluralForm": "Bahnen" },
+    "Sommer": { "type": "noun", "gender": "m" },
+    "Januar": { "type": "noun", "gender": "m" },
+    "Hallo": { "type": "noun", "gender": "n" },
+    "Danke": { "type": "noun", "gender": "n" },
+    "Spanisch": { "type": "noun", "gender": "n" },
+    "Kopfschmerzen": { "type": "noun", "gender": "m" },
+    "Medizin": { "type": "noun", "gender": "f" },
+    "Fernseher": { "type": "noun", "gender": "m", "pluralForm": "Fernseher" },
+    "Kilo": { "type": "noun", "gender": "n" },
+    "Wiedersehen": { "type": "noun", "gender": "n" }
   },
   "adjectives": {
     "gut": {
@@ -955,6 +1193,78 @@
         "n-nominative": "grüne", "n-accusative": "grünes", "n-dative": "grünem", "n-genitive": "grünen"
       }
     },
+    "blau": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "blaue", "m-accusative": "blauen", "m-dative": "blauem", "m-genitive": "blauen",
+        "f-nominative": "blaue", "f-accusative": "blaue", "f-dative": "blauer", "f-genitive": "blauer",
+        "n-nominative": "blaue", "n-accusative": "blaues", "n-dative": "blauem", "n-genitive": "blauen"
+      }
+    },
+    "braun": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "braune", "m-accusative": "braunen", "m-dative": "braunem", "m-genitive": "braunen",
+        "f-nominative": "braune", "f-accusative": "braune", "f-dative": "brauner", "f-genitive": "brauner",
+        "n-nominative": "braune", "n-accusative": "braunes", "n-dative": "braunem", "n-genitive": "braunen"
+      }
+    },
+    "rot": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "rote", "m-accusative": "roten", "m-dative": "rotem", "m-genitive": "roten",
+        "f-nominative": "rote", "f-accusative": "rote", "f-dative": "roter", "f-genitive": "roter",
+        "n-nominative": "rote", "n-accusative": "rotes", "n-dative": "rotem", "n-genitive": "roten"
+      }
+    },
+    "schwarz": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "schwarze", "m-accusative": "schwarzen", "m-dative": "schwarzem", "m-genitive": "schwarzen",
+        "f-nominative": "schwarze", "f-accusative": "schwarze", "f-dative": "schwarzer", "f-genitive": "schwarzer",
+        "n-nominative": "schwarze", "n-accusative": "schwarzes", "n-dative": "schwarzem", "n-genitive": "schwarzen"
+      }
+    },
+    "berühmt": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "berühmte", "m-accusative": "berühmten", "m-dative": "berühmtem", "m-genitive": "berühmten",
+        "f-nominative": "berühmte", "f-accusative": "berühmte", "f-dative": "berühmter", "f-genitive": "berühmter",
+        "n-nominative": "berühmte", "n-accusative": "berühmtes", "n-dative": "berühmtem", "n-genitive": "berühmten"
+      }
+    },
+    "modern": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "moderne", "m-accusative": "modernen", "m-dative": "modernem", "m-genitive": "modernen",
+        "f-nominative": "moderne", "f-accusative": "moderne", "f-dative": "moderner", "f-genitive": "moderner",
+        "n-nominative": "moderne", "n-accusative": "modernes", "n-dative": "modernem", "n-genitive": "modernen"
+      }
+    },
+    "perfekt": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "perfekte", "m-accusative": "perfekten", "m-dative": "perfektem", "m-genitive": "perfekten",
+        "f-nominative": "perfekte", "f-accusative": "perfekte", "f-dative": "perfekter", "f-genitive": "perfekter",
+        "n-nominative": "perfekte", "n-accusative": "perfektes", "n-dative": "perfektem", "n-genitive": "perfekten"
+      }
+    },
+    "wunderbar": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "wunderbare", "m-accusative": "wunderbaren", "m-dative": "wunderbarem", "m-genitive": "wunderbaren",
+        "f-nominative": "wunderbare", "f-accusative": "wunderbare", "f-dative": "wunderbarer", "f-genitive": "wunderbarer",
+        "n-nominative": "wunderbare", "n-accusative": "wunderbares", "n-dative": "wunderbarem", "n-genitive": "wunderbaren"
+      }
+    },
+    "ganz": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "ganze", "m-accusative": "ganzen", "m-dative": "ganzem", "m-genitive": "ganzen",
+        "f-nominative": "ganze", "f-accusative": "ganze", "f-dative": "ganzer", "f-genitive": "ganzer",
+        "n-nominative": "ganze", "n-accusative": "ganzes", "n-dative": "ganzem", "n-genitive": "ganzen"
+      }
+    },
     "täglich": {
       "type": "adjective",
       "declensions": {
@@ -1018,6 +1328,38 @@
         "f-nominative": "deutsche", "f-accusative": "deutsche", "f-dative": "deutscher", "f-genitive": "deutscher",
         "n-nominative": "deutsche", "n-accusative": "deutsches", "n-dative": "deutschem", "n-genitive": "deutschen"
       }
+    },
+    "weiß": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "weiße", "m-accusative": "weißen", "m-dative": "weißem", "m-genitive": "weißen",
+        "f-nominative": "weiße", "f-accusative": "weiße", "f-dative": "weißer", "f-genitive": "weißer",
+        "n-nominative": "weiße", "n-accusative": "weißes", "n-dative": "weißem", "n-genitive": "weißen"
+      }
+    },
+    "hell": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "helle", "m-accusative": "hellen", "m-dative": "hellem", "m-genitive": "hellen",
+        "f-nominative": "helle", "f-accusative": "helle", "f-dative": "heller", "f-genitive": "heller",
+        "n-nominative": "helle", "n-accusative": "helles", "n-dative": "hellem", "n-genitive": "hellen"
+      }
+    },
+    "toll": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "tolle", "m-accusative": "tollen", "m-dative": "tollem", "m-genitive": "tollen",
+        "f-nominative": "tolle", "f-accusative": "tolle", "f-dative": "toller", "f-genitive": "toller",
+        "n-nominative": "tolle", "n-accusative": "tolles", "n-dative": "tollem", "n-genitive": "tollen"
+      }
+    },
+    "geschlossen": {
+      "type": "adjective",
+      "declensions": {
+        "m-nominative": "geschlossene", "m-accusative": "geschlossenen", "m-dative": "geschlossenem", "m-genitive": "geschlossenen",
+        "f-nominative": "geschlossene", "f-accusative": "geschlossene", "f-dative": "geschlossener", "f-genitive": "geschlossener",
+        "n-nominative": "geschlossene", "n-accusative": "geschlossenes", "n-dative": "geschlossenem", "n-genitive": "geschlossenen"
+      }
     }
   },
   "articles": {
@@ -1045,7 +1387,17 @@
     "es": { "type": "pronoun" },
     "wir": { "type": "pronoun" },
     "ihr": { "type": "pronoun" },
-    "man": { "type": "pronoun" }
+    "man": { "type": "pronoun" },
+    "mich": { "type": "pronoun" },
+    "dich": { "type": "pronoun" },
+    "ihn": { "type": "pronoun" },
+    "uns": { "type": "pronoun" },
+    "euch": { "type": "pronoun" },
+    "mir": { "type": "pronoun" },
+    "dir": { "type": "pronoun" },
+    "ihm": { "type": "pronoun" },
+    "ihnen": { "type": "pronoun" },
+    "sich": { "type": "pronoun" }
   },
   "possessives": {
     "mein": {
@@ -1094,7 +1446,9 @@
     "zwischen": { "type": "preposition" },
     "ohne": { "type": "preposition" },
     "gegen": { "type": "preposition" },
-    "durch": { "type": "preposition" }
+    "durch": { "type": "preposition" },
+    "seit": { "type": "preposition" },
+    "ab": { "type": "preposition" }
   },
   "adverbs": {
     "heute": { "type": "adverb" },
@@ -1160,7 +1514,22 @@
     "überrascht": { "type": "adverb" },
     "jeden": { "type": "adverb" },
     "bis": { "type": "adverb" },
-    "ab": { "type": "adverb" }
+    "ab": { "type": "adverb" },
+    "geradeaus": { "type": "adverb" },
+    "gegenüber": { "type": "adverb" },
+    "bar": { "type": "adverb" },
+    "letzte": { "type": "adverb" },
+    "seit": { "type": "adverb" },
+    "wie": { "type": "adverb" },
+    "wo": { "type": "adverb" },
+    "was": { "type": "adverb" },
+    "wann": { "type": "adverb" },
+    "warum": { "type": "adverb" },
+    "woher": { "type": "adverb" },
+    "wohin": { "type": "adverb" },
+    "welche": { "type": "adverb" },
+    "welcher": { "type": "adverb" },
+    "welches": { "type": "adverb" }
   },
   "conjunctions": {
     "und": { "type": "conjunction" },

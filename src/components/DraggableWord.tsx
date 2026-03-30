@@ -3,7 +3,7 @@ import type { MouseEvent } from 'react';
 import { useDraggable } from '@dnd-kit/core';
 import type { WordState, ContextMenuOption } from '../types';
 import { getWordColor } from '../utils/colorUtils';
-import { getConjugationOptions, getArticleMatrix, getAdjectiveMatrix } from '../utils/conjugationUtils';
+import { getConjugationOptions } from '../utils/conjugationUtils';
 import { ContextMenu } from './ContextMenu';
 import './DraggableWord.css';
 
@@ -125,9 +125,8 @@ export function DraggableWord({
 
   const menuOptions = getContextMenuOptions();
   const isArticle = word.type === 'article' && word.forms;
-  const isAdjective = word.type === 'adjective' && word.declensions;
-  const hasMatrix = isArticle || isAdjective;
-  const hasMenu = menuOptions.length > 0 || hasMatrix;
+  // Adjectives no longer have dropdowns
+  const hasMenu = menuOptions.length > 0 || isArticle;
 
   return (
     <>
@@ -164,12 +163,9 @@ export function DraggableWord({
           y={contextMenu.y}
           options={menuOptions}
           onClose={() => setContextMenu(null)}
-          articleMatrix={hasMatrix ? {
-            matrix: isArticle
-              ? getArticleMatrix(word.forms!)
-              : getAdjectiveMatrix(word.declensions!, word.baseForm).matrix,
+          simpleList={isArticle ? {
+            forms: [...new Set(word.forms!)],
             onSelect: (value) => onUpdateForm(word.id, value),
-            baseForm: isAdjective ? word.baseForm : undefined,
           } : undefined}
           readOnly={disabled}
         />
